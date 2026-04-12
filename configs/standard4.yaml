@@ -75,7 +75,8 @@ t_camera2gimbal: [0.045517325957791413, 0.10544338092767802, 0.03464971088018579
 quaternion_canid: 0x100
 bullet_speed_canid: 0x101
 send_canid: 0xff
-can_interface: "can0"
+can_interface: "/dev/rm_serial"
+baudrate: 115200
 
 #####-----gimbal参数-----#####
 com_port: "/dev/gimbal"

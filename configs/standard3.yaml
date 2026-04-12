@@ -7,7 +7,7 @@ classify_model: assets/tiny_resnet.onnx
 yolo11_model_path: assets/yolo11.xml
 yolov8_model_path: assets/yolov8.xml
 yolov5_model_path: assets/yolov5.xml
-device: GPU
+device: CPU
 min_confidence: 0.8
 use_traditional: true
 
@@ -52,7 +52,7 @@ judge_distance: 2 #距离判断阈值
 auto_fire: true # 是否由自瞄控制射击
 
 camera_name: "hikrobot"
-exposure_ms: 2.5
+exposure_ms: 10
 gain: 16.9
 vid_pid: "2bdf:0001"
 
@@ -75,7 +75,8 @@ t_camera2gimbal: [0.13160669975045827, 0.10377721766577375, 0.024908271912914642
 quaternion_canid: 0x100
 bullet_speed_canid: 0x101
 send_canid: 0xff
-can_interface: "can0"
+can_interface: "/dev/rm_serial"
+baudrate: 115200
 
 #####-----gimbal参数-----#####
 com_port: "/dev/gimbal"

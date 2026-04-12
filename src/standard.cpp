@@ -56,6 +56,10 @@ int main(int argc, char * argv[])
 
   while (!exiter.exit()) {
     camera.read(img, t);
+    static int frame_cnt = 0;
+    if (frame_cnt++ % 100 == 0) {
+        tools::logger()->info("Heartbeat: Camera got frame {}, processing...", frame_cnt);
+    }
     q = cboard.imu_at(t - 1ms);
     mode = cboard.mode;
 
@@ -73,10 +77,30 @@ int main(int argc, char * argv[])
     auto armors = detector.detect(img);
 
     auto targets = tracker.track(armors, t);
-
+    //cboard.bullet_speed = 28.0;
     auto command = aimer.aim(targets, t, cboard.bullet_speed);
 
+// 1. 检查 YOLO 是否检测到装甲板
+    if (!armors.empty()) {
+        tools::logger()->info("--- Detected {} armors ---", armors.size());
+    }
+
+    // 2. 检查追踪器是否有目标 (targets 是一个 std::list)
+    if (!targets.empty()) {
+        // 打印当前追踪的目标数量
+        tools::logger()->info("Target Locked! Tracking {} targets", targets.size());
+        
+        // 3. 打印发送给电控的具体指令数据
+        // 根据 io/command.hpp，成员为 yaw, pitch, shoot
+        tools::logger()->info("Send To MCU -> Yaw: {:.3f} | Pitch: {:.3f} | Shoot: {}", 
+                              command.yaw, command.pitch, command.shoot);
+    }
+
     cboard.send(command);
+
+    cboard.send(command);
+
+    
   }
 
   return 0;

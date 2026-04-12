@@ -13,4 +13,5 @@ vid_pid: "2bdf:0001"
 quaternion_canid: 0x01
 bullet_speed_canid: 0x110
 send_canid: 0xff
-can_interface: "can0"
+can_interface: "/dev/rm_serial"
+baudrate: 115200

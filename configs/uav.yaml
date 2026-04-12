@@ -58,7 +58,8 @@ min_confidence: 0.8
 quaternion_canid: 0x001
 bullet_speed_canid: 0x110
 send_canid: 0xff
-can_interface: "can0"
+can_interface: "/dev/rm_serial"
+baudrate: 115200
 
 #####-----tracker参数-----#####
 min_detect_count: 5

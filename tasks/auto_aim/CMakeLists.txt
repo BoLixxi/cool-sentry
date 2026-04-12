@@ -6,7 +6,7 @@ find_package(OpenVINO REQUIRED COMPONENTS Runtime)
 
 add_subdirectory(planner/tinympc)
 
-add_library(auto_aim OBJECT 
+add_library(auto_aim STATIC 
     armor.cpp
     classifier.cpp 
     detector.cpp

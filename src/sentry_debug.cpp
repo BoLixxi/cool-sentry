@@ -45,9 +45,9 @@ int main(int argc, char * argv[])
   io::ROS2 ros2;
   io::CBoard cboard(config_path);
   io::Camera camera(config_path);
-  io::Camera back_camera("configs/camera.yaml");
-  io::USBCamera usbcam1("video0", config_path);
-  io::USBCamera usbcam2("video2", config_path);
+  //io::Camera back_camera("configs/camera.yaml");
+  //io::USBCamera usbcam1("video0", config_path);
+  //io::USBCamera usbcam2("video2", config_path);
 
   auto_aim::YOLO yolo(config_path, false);
   auto_aim::Solver solver(config_path);
@@ -87,11 +87,11 @@ int main(int argc, char * argv[])
     io::Command command{false, false, 0, 0};
 
     /// 全向感知逻辑
-    if (tracker.state() == "lost")
-      command = decider.decide(yolo, gimbal_pos, usbcam1, usbcam2, back_camera);
-    else
-      command = aimer.aim(targets, timestamp, cboard.bullet_speed, cboard.shoot_mode);
-
+  //  if (tracker.state() == "lost")
+   //   command = decider.decide(yolo, gimbal_pos, usbcam1, usbcam2, back_camera);
+  //  else
+  //    command = aimer.aim(targets, timestamp, cboard.bullet_speed, cboard.shoot_mode);
+//
     /// 发射逻辑
     command.shoot = shooter.shoot(command, aimer, targets, gimbal_pos);
 

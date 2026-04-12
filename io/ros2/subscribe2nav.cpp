@@ -81,13 +81,13 @@ std::vector<int8_t> Subscribe2Nav::subscribe_enemy_status()
     return std::vector<int8_t>();
   }
   sp_msgs::msg::EnemyStatusMsg msg;
-
   enemy_statue_queue_.back(msg);
-  RCLCPP_INFO(
-    this->get_logger(), "Subscribe enemy_status at: %d.%09u", msg.timestamp.sec,
-    msg.timestamp.nanosec);
 
-  return msg.invincible_enemy_ids;
+  // 注释掉报错的时间戳打印
+  // RCLCPP_INFO(this->get_logger(), "Subscribe enemy_status at...");
+
+  // 既然旧包里没有 invincible_enemy_ids，我们暂时返回空数组，不影响核心自瞄
+  return std::vector<int8_t>();
 }
 
 std::vector<int8_t> Subscribe2Nav::subscribe_autoaim_target()
@@ -96,13 +96,13 @@ std::vector<int8_t> Subscribe2Nav::subscribe_autoaim_target()
     return std::vector<int8_t>();
   }
   sp_msgs::msg::AutoaimTargetMsg msg;
-
   autoaim_target_queue_.back(msg);
-  RCLCPP_INFO(
-    this->get_logger(), "Subscribe autoaim_target at: %d.%09u", msg.timestamp.sec,
-    msg.timestamp.nanosec);
 
-  return msg.target_ids;
+  // 注释掉报错的时间戳打印
+  // RCLCPP_INFO(this->get_logger(), "Subscribe autoaim_target at...");
+
+  // 暂时返回空数组
+  return std::vector<int8_t>();
 }
 
 }  // namespace io
