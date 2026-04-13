@@ -74,11 +74,11 @@ int main(int argc, char * argv[])
 
     auto armors = yolo.detect(img);
 
-    decider.get_invincible_armor(ros2.subscribe_enemy_status());
+   // decider.get_invincible_armor(ros2.subscribe_enemy_status());
 
     decider.armor_filter(armors);
 
-    decider.get_auto_aim_target(armors, ros2.subscribe_autoaim_target());
+  //  decider.get_auto_aim_target(armors, ros2.subscribe_autoaim_target());
 
     decider.set_priority(armors);
 
@@ -86,12 +86,17 @@ int main(int argc, char * argv[])
 
     io::Command command{false, false, 0, 0};
 
-    /// 全向感知逻辑
-  //  if (tracker.state() == "lost")
-   //   command = decider.decide(yolo, gimbal_pos, usbcam1, usbcam2, back_camera);
-  //  else
-  //    command = aimer.aim(targets, timestamp, cboard.bullet_speed, cboard.shoot_mode);
-//
+   /// 全向感知逻辑
+    if (tracker.state() == "lost") {
+      // 丢失目标时，云台保持原位
+      command.control = true;
+      command.shoot = false;
+      command.yaw = 0;
+      command.pitch = 0;
+    } else {
+      // 锁定目标时，交给 aimer 解算
+      command = aimer.aim(targets, timestamp, cboard.bullet_speed, cboard.shoot_mode);
+    }
     /// 发射逻辑
     command.shoot = shooter.shoot(command, aimer, targets, gimbal_pos);
 

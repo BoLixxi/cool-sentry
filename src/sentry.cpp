@@ -64,8 +64,8 @@ int main(int argc, char * argv[])
 
   while (!exiter.exit()) {
     camera.read(img, timestamp);
-   / Eigen::Quaterniond q = cboard.imu_at(timestamp - 1ms);
-   //Eigen::Quaterniond q = Eigen::Quaterniond(1.0, 0.0, 0.0, 0.0);
+   // Eigen::Quaterniond q = cboard.imu_at(timestamp - 1ms);
+   Eigen::Quaterniond q = Eigen::Quaterniond(1.0, 0.0, 0.0, 0.0);
     // recorder.record(img, q, timestamp);
 
     /// 自瞄核心逻辑
