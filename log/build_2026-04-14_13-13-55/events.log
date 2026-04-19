@@ -1,0 +1,1162 @@
+[0.000000] (-) TimerEvent: {}
+[0.000265] (sp_vision) JobQueued: {'identifier': 'sp_vision', 'dependencies': OrderedDict()}
+[0.000301] (sp_vision) JobStarted: {'identifier': 'sp_vision'}
+[0.011056] (sp_vision) JobProgress: {'identifier': 'sp_vision', 'progress': 'cmake'}
+[0.012312] (sp_vision) JobProgress: {'identifier': 'sp_vision', 'progress': 'build'}
+[0.012478] (sp_vision) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision'], 'cwd': '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'xiaoli'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/MVS/bin:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/home/xiaoli/ros2_ws/install/sp_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/bin:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:'), ('HOME', '/home/xiaoli'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.112.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '4076'), ('MAKEFLAGS', '-j4'), ('SYSTEMD_EXEC_PID', '4430'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6557'), ('COLCON_PREFIX_PATH', '/home/xiaoli/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xiaoli'), ('JOURNAL_STREAM', '8:2824'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xiaoli'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/opt/MVS/bin:/opt/MVS/bin:/home/xiaoli/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/xiaoli/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/xiaoli/.local/bin:/opt/ros/humble/bin:/opt/MVS/bin:/opt/MVS/bin:/home/xiaoli/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xiaoli-Legion-Y7000P-IRX9:@/tmp/.ICE-unix/4402,unix/xiaoli-Legion-Y7000P-IRX9:/tmp/.ICE-unix/4402'), ('INVOCATION_ID', '57d32c13b08441a2955bec3036d734ec'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-30d9190c70.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/xiaoli/ros2_ws/install/sp_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xiaoli/ros2_ws/install/sp_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('MVCAM_SDK_VERSION', ''), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('MVS_HOME', '/opt/MVS'), ('CMAKE_PREFIX_PATH', '/home/xiaoli/ros2_ws/install/sp_msgs'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib')]), 'shell': False}
+[0.059167] (sp_vision) StdoutLine: {'line': b'[  2%] Built target omniperception\n'}
+[0.059489] (sp_vision) StdoutLine: {'line': b'[  7%] Built target serial\n'}
+[0.059567] (sp_vision) StdoutLine: {'line': b'[  9%] Built target tinympcstatic\n'}
+[0.064142] (sp_vision) StdoutLine: {'line': b'[ 17%] Built target tools\n'}
+[0.073333] (sp_vision) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target calibrate_robotworld_handeye\x1b[0m\n'}
+[0.073862] (sp_vision) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target calibrate_camera\x1b[0m\n'}
+[0.073993] (sp_vision) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target calibrate_handeye\x1b[0m\n'}
+[0.086988] (sp_vision) StdoutLine: {'line': b'[ 25%] Built target io\n'}
+[0.087692] (sp_vision) StdoutLine: {'line': b'[ 26%] Built target calibrate_robotworld_handeye\n'}
+[0.087774] (sp_vision) StdoutLine: {'line': b'[ 27%] Built target calibrate_camera\n'}
+[0.088466] (sp_vision) StdoutLine: {'line': b'[ 29%] Built target calibrate_handeye\n'}
+[0.099565] (-) TimerEvent: {}
+[0.102851] (sp_vision) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/split_video.dir/calibration/split_video.cpp.o\x1b[0m\n'}
+[0.103637] (sp_vision) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/fire_test.dir/tests/fire_test.cpp.o\x1b[0m\n'}
+[0.104340] (sp_vision) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/camera_test.dir/tests/camera_test.cpp.o\x1b[0m\n'}
+[0.104797] (sp_vision) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/cboard_test.dir/tests/cboard_test.cpp.o\x1b[0m\n'}
+[0.199667] (-) TimerEvent: {}
+[0.300007] (-) TimerEvent: {}
+[0.400337] (-) TimerEvent: {}
+[0.500623] (-) TimerEvent: {}
+[0.600902] (-) TimerEvent: {}
+[0.701175] (-) TimerEvent: {}
+[0.801488] (-) TimerEvent: {}
+[0.901877] (-) TimerEvent: {}
+[1.002161] (-) TimerEvent: {}
+[1.102454] (-) TimerEvent: {}
+[1.202752] (-) TimerEvent: {}
+[1.303156] (-) TimerEvent: {}
+[1.403485] (-) TimerEvent: {}
+[1.503793] (-) TimerEvent: {}
+[1.604197] (-) TimerEvent: {}
+[1.704594] (-) TimerEvent: {}
+[1.804916] (-) TimerEvent: {}
+[1.905168] (-) TimerEvent: {}
+[2.005404] (-) TimerEvent: {}
+[2.105659] (-) TimerEvent: {}
+[2.205986] (-) TimerEvent: {}
+[2.306277] (-) TimerEvent: {}
+[2.406549] (-) TimerEvent: {}
+[2.506795] (-) TimerEvent: {}
+[2.607069] (-) TimerEvent: {}
+[2.707348] (-) TimerEvent: {}
+[2.807623] (-) TimerEvent: {}
+[2.907894] (-) TimerEvent: {}
+[3.008247] (-) TimerEvent: {}
+[3.108622] (-) TimerEvent: {}
+[3.209018] (-) TimerEvent: {}
+[3.309314] (-) TimerEvent: {}
+[3.409710] (-) TimerEvent: {}
+[3.510109] (-) TimerEvent: {}
+[3.610431] (-) TimerEvent: {}
+[3.710730] (-) TimerEvent: {}
+[3.811048] (-) TimerEvent: {}
+[3.911288] (-) TimerEvent: {}
+[4.011543] (-) TimerEvent: {}
+[4.111791] (-) TimerEvent: {}
+[4.212057] (-) TimerEvent: {}
+[4.312306] (-) TimerEvent: {}
+[4.412566] (-) TimerEvent: {}
+[4.512816] (-) TimerEvent: {}
+[4.613146] (-) TimerEvent: {}
+[4.713371] (-) TimerEvent: {}
+[4.813683] (-) TimerEvent: {}
+[4.914015] (-) TimerEvent: {}
+[5.014342] (-) TimerEvent: {}
+[5.114571] (-) TimerEvent: {}
+[5.214813] (-) TimerEvent: {}
+[5.315066] (-) TimerEvent: {}
+[5.415445] (-) TimerEvent: {}
+[5.462614] (sp_vision) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX executable camera_test\x1b[0m\n'}
+[5.488925] (sp_vision) StdoutLine: {'line': b'[ 34%] \x1b[32m\x1b[1mLinking CXX executable split_video\x1b[0m\n'}
+[5.515563] (-) TimerEvent: {}
+[5.585279] (sp_vision) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking CXX executable cboard_test\x1b[0m\n'}
+[5.615717] (-) TimerEvent: {}
+[5.716106] (-) TimerEvent: {}
+[5.816390] (-) TimerEvent: {}
+[5.916734] (-) TimerEvent: {}
+[5.939082] (sp_vision) StdoutLine: {'line': b'[ 35%] Built target cboard_test\n'}
+[5.941256] (sp_vision) StdoutLine: {'line': b'[ 35%] Built target split_video\n'}
+[5.958356] (sp_vision) StdoutLine: {'line': b'[ 35%] Built target camera_test\n'}
+[5.958933] (sp_vision) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/gimbal_response_test.dir/tests/gimbal_response_test.cpp.o\x1b[0m\n'}
+[5.961005] (sp_vision) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/multi_usbcamera_test.dir/tests/multi_usbcamera_test.cpp.o\x1b[0m\n'}
+[5.976396] (sp_vision) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/usbcamera_test.dir/tests/usbcamera_test.cpp.o\x1b[0m\n'}
+[6.016905] (-) TimerEvent: {}
+[6.117260] (-) TimerEvent: {}
+[6.192331] (sp_vision) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX executable fire_test\x1b[0m\n'}
+[6.217384] (-) TimerEvent: {}
+[6.317753] (-) TimerEvent: {}
+[6.418169] (-) TimerEvent: {}
+[6.518471] (-) TimerEvent: {}
+[6.566876] (sp_vision) StdoutLine: {'line': b'[ 38%] Built target fire_test\n'}
+[6.578377] (sp_vision) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dm_test\x1b[0m\n'}
+[6.592760] (sp_vision) StdoutLine: {'line': b'[ 40%] Built target dm_test\n'}
+[6.611959] (sp_vision) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/subscribe_test.dir/tests/subscribe_test.cpp.o\x1b[0m\n'}
+[6.618572] (-) TimerEvent: {}
+[6.718880] (-) TimerEvent: {}
+[6.819203] (-) TimerEvent: {}
+[6.919507] (-) TimerEvent: {}
+[7.019903] (-) TimerEvent: {}
+[7.120202] (-) TimerEvent: {}
+[7.220494] (-) TimerEvent: {}
+[7.320835] (-) TimerEvent: {}
+[7.421221] (-) TimerEvent: {}
+[7.521578] (-) TimerEvent: {}
+[7.621976] (-) TimerEvent: {}
+[7.722390] (-) TimerEvent: {}
+[7.822785] (-) TimerEvent: {}
+[7.923183] (-) TimerEvent: {}
+[8.023477] (-) TimerEvent: {}
+[8.123876] (-) TimerEvent: {}
+[8.224277] (-) TimerEvent: {}
+[8.324565] (-) TimerEvent: {}
+[8.424894] (-) TimerEvent: {}
+[8.525235] (-) TimerEvent: {}
+[8.625557] (-) TimerEvent: {}
+[8.725911] (-) TimerEvent: {}
+[8.826307] (-) TimerEvent: {}
+[8.926707] (-) TimerEvent: {}
+[9.026995] (-) TimerEvent: {}
+[9.127391] (-) TimerEvent: {}
+[9.227704] (-) TimerEvent: {}
+[9.328905] (-) TimerEvent: {}
+[9.429323] (-) TimerEvent: {}
+[9.529635] (-) TimerEvent: {}
+[9.630006] (-) TimerEvent: {}
+[9.730293] (-) TimerEvent: {}
+[9.830577] (-) TimerEvent: {}
+[9.930921] (-) TimerEvent: {}
+[10.031317] (-) TimerEvent: {}
+[10.131582] (-) TimerEvent: {}
+[10.231967] (-) TimerEvent: {}
+[10.332249] (-) TimerEvent: {}
+[10.432653] (-) TimerEvent: {}
+[10.532959] (-) TimerEvent: {}
+[10.633315] (-) TimerEvent: {}
+[10.733613] (-) TimerEvent: {}
+[10.833992] (-) TimerEvent: {}
+[10.934276] (-) TimerEvent: {}
+[11.034568] (-) TimerEvent: {}
+[11.134887] (-) TimerEvent: {}
+[11.235276] (-) TimerEvent: {}
+[11.280313] (sp_vision) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX executable multi_usbcamera_test\x1b[0m\n'}
+[11.306270] (sp_vision) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX executable usbcamera_test\x1b[0m\n'}
+[11.335449] (-) TimerEvent: {}
+[11.435832] (-) TimerEvent: {}
+[11.536209] (-) TimerEvent: {}
+[11.636532] (-) TimerEvent: {}
+[11.671558] (sp_vision) StdoutLine: {'line': b'[ 43%] Built target multi_usbcamera_test\n'}
+[11.687410] (sp_vision) StdoutLine: {'line': b'[ 43%] Built target usbcamera_test\n'}
+[11.691269] (sp_vision) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/topic_loop_test.dir/tests/topic_loop_test.cpp.o\x1b[0m\n'}
+[11.715628] (sp_vision) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/detector.cpp.o\x1b[0m\n'}
+[11.736663] (-) TimerEvent: {}
+[11.836995] (-) TimerEvent: {}
+[11.839823] (sp_vision) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX executable gimbal_response_test\x1b[0m\n'}
+[11.937220] (-) TimerEvent: {}
+[12.037600] (-) TimerEvent: {}
+[12.137988] (-) TimerEvent: {}
+[12.187347] (sp_vision) StdoutLine: {'line': b'[ 46%] Built target gimbal_response_test\n'}
+[12.211072] (sp_vision) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/capture.dir/calibration/capture.cpp.o\x1b[0m\n'}
+[12.238204] (-) TimerEvent: {}
+[12.338503] (-) TimerEvent: {}
+[12.438895] (-) TimerEvent: {}
+[12.539299] (-) TimerEvent: {}
+[12.639693] (-) TimerEvent: {}
+[12.740057] (-) TimerEvent: {}
+[12.761651] (sp_vision) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX executable subscribe_test\x1b[0m\n'}
+[12.840221] (-) TimerEvent: {}
+[12.940615] (-) TimerEvent: {}
+[13.041007] (-) TimerEvent: {}
+[13.141371] (-) TimerEvent: {}
+[13.164280] (sp_vision) StdoutLine: {'line': b'[ 47%] Built target subscribe_test\n'}
+[13.171632] (sp_vision) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/solver.cpp.o\x1b[0m\n'}
+[13.241488] (-) TimerEvent: {}
+[13.341823] (-) TimerEvent: {}
+[13.442162] (-) TimerEvent: {}
+[13.542486] (-) TimerEvent: {}
+[13.642822] (-) TimerEvent: {}
+[13.743150] (-) TimerEvent: {}
+[13.843389] (-) TimerEvent: {}
+[13.943710] (-) TimerEvent: {}
+[14.044048] (-) TimerEvent: {}
+[14.144370] (-) TimerEvent: {}
+[14.244700] (-) TimerEvent: {}
+[14.345031] (-) TimerEvent: {}
+[14.445370] (-) TimerEvent: {}
+[14.545681] (-) TimerEvent: {}
+[14.646003] (-) TimerEvent: {}
+[14.746253] (-) TimerEvent: {}
+[14.846581] (-) TimerEvent: {}
+[14.946919] (-) TimerEvent: {}
+[15.047258] (-) TimerEvent: {}
+[15.147530] (-) TimerEvent: {}
+[15.247841] (-) TimerEvent: {}
+[15.348161] (-) TimerEvent: {}
+[15.448485] (-) TimerEvent: {}
+[15.548812] (-) TimerEvent: {}
+[15.649145] (-) TimerEvent: {}
+[15.749381] (-) TimerEvent: {}
+[15.849642] (-) TimerEvent: {}
+[15.949963] (-) TimerEvent: {}
+[16.050262] (-) TimerEvent: {}
+[16.150542] (-) TimerEvent: {}
+[16.250859] (-) TimerEvent: {}
+[16.351169] (-) TimerEvent: {}
+[16.451547] (-) TimerEvent: {}
+[16.551922] (-) TimerEvent: {}
+[16.652202] (-) TimerEvent: {}
+[16.752484] (-) TimerEvent: {}
+[16.852877] (-) TimerEvent: {}
+[16.953151] (-) TimerEvent: {}
+[17.053417] (-) TimerEvent: {}
+[17.153714] (-) TimerEvent: {}
+[17.254084] (-) TimerEvent: {}
+[17.354472] (-) TimerEvent: {}
+[17.454861] (-) TimerEvent: {}
+[17.555253] (-) TimerEvent: {}
+[17.655582] (-) TimerEvent: {}
+[17.755952] (-) TimerEvent: {}
+[17.762384] (sp_vision) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX executable capture\x1b[0m\n'}
+[17.856167] (-) TimerEvent: {}
+[17.956440] (-) TimerEvent: {}
+[18.056800] (-) TimerEvent: {}
+[18.136400] (sp_vision) StdoutLine: {'line': b'[ 47%] Built target capture\n'}
+[18.143531] (sp_vision) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/aimer.cpp.o\x1b[0m\n'}
+[18.156974] (-) TimerEvent: {}
+[18.257378] (-) TimerEvent: {}
+[18.357746] (-) TimerEvent: {}
+[18.458105] (-) TimerEvent: {}
+[18.558473] (-) TimerEvent: {}
+[18.658847] (-) TimerEvent: {}
+[18.759209] (-) TimerEvent: {}
+[18.859480] (-) TimerEvent: {}
+[18.959797] (-) TimerEvent: {}
+[19.060159] (-) TimerEvent: {}
+[19.160437] (-) TimerEvent: {}
+[19.260780] (-) TimerEvent: {}
+[19.337326] (sp_vision) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/target.cpp.o\x1b[0m\n'}
+[19.360952] (-) TimerEvent: {}
+[19.461335] (-) TimerEvent: {}
+[19.561712] (-) TimerEvent: {}
+[19.662072] (-) TimerEvent: {}
+[19.706215] (sp_vision) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable topic_loop_test\x1b[0m\n'}
+[19.762201] (-) TimerEvent: {}
+[19.862585] (-) TimerEvent: {}
+[19.962955] (-) TimerEvent: {}
+[20.063355] (-) TimerEvent: {}
+[20.087161] (sp_vision) StdoutLine: {'line': b'[ 50%] Built target topic_loop_test\n'}
+[20.095414] (sp_vision) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/tracker.cpp.o\x1b[0m\n'}
+[20.163470] (-) TimerEvent: {}
+[20.245019] (sp_vision) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/shooter.cpp.o\x1b[0m\n'}
+[20.263651] (-) TimerEvent: {}
+[20.363978] (-) TimerEvent: {}
+[20.464323] (-) TimerEvent: {}
+[20.564639] (-) TimerEvent: {}
+[20.664893] (-) TimerEvent: {}
+[20.765186] (-) TimerEvent: {}
+[20.865418] (-) TimerEvent: {}
+[20.965738] (-) TimerEvent: {}
+[21.065964] (-) TimerEvent: {}
+[21.166185] (-) TimerEvent: {}
+[21.266441] (-) TimerEvent: {}
+[21.366761] (-) TimerEvent: {}
+[21.467098] (-) TimerEvent: {}
+[21.567333] (-) TimerEvent: {}
+[21.667597] (-) TimerEvent: {}
+[21.767910] (-) TimerEvent: {}
+[21.868172] (-) TimerEvent: {}
+[21.968394] (-) TimerEvent: {}
+[22.068699] (-) TimerEvent: {}
+[22.169018] (-) TimerEvent: {}
+[22.269257] (-) TimerEvent: {}
+[22.369517] (-) TimerEvent: {}
+[22.469834] (-) TimerEvent: {}
+[22.570164] (-) TimerEvent: {}
+[22.670465] (-) TimerEvent: {}
+[22.770779] (-) TimerEvent: {}
+[22.871108] (-) TimerEvent: {}
+[22.971350] (-) TimerEvent: {}
+[23.071607] (-) TimerEvent: {}
+[23.171932] (-) TimerEvent: {}
+[23.272278] (-) TimerEvent: {}
+[23.372605] (-) TimerEvent: {}
+[23.472930] (-) TimerEvent: {}
+[23.573214] (-) TimerEvent: {}
+[23.673471] (-) TimerEvent: {}
+[23.773712] (-) TimerEvent: {}
+[23.873950] (-) TimerEvent: {}
+[23.974210] (-) TimerEvent: {}
+[24.074535] (-) TimerEvent: {}
+[24.174841] (-) TimerEvent: {}
+[24.275171] (-) TimerEvent: {}
+[24.328701] (sp_vision) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov5.cpp.o\x1b[0m\n'}
+[24.375357] (-) TimerEvent: {}
+[24.475662] (-) TimerEvent: {}
+[24.575972] (-) TimerEvent: {}
+[24.676211] (-) TimerEvent: {}
+[24.776490] (-) TimerEvent: {}
+[24.876836] (-) TimerEvent: {}
+[24.977160] (-) TimerEvent: {}
+[25.077454] (-) TimerEvent: {}
+[25.177761] (-) TimerEvent: {}
+[25.278100] (-) TimerEvent: {}
+[25.378374] (-) TimerEvent: {}
+[25.478631] (-) TimerEvent: {}
+[25.578946] (-) TimerEvent: {}
+[25.679173] (-) TimerEvent: {}
+[25.779398] (-) TimerEvent: {}
+[25.879622] (-) TimerEvent: {}
+[25.906476] (sp_vision) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov8.cpp.o\x1b[0m\n'}
+[25.979791] (-) TimerEvent: {}
+[25.988851] (sp_vision) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolo11.cpp.o\x1b[0m\n'}
+[26.079884] (-) TimerEvent: {}
+[26.180109] (-) TimerEvent: {}
+[26.280327] (-) TimerEvent: {}
+[26.380686] (-) TimerEvent: {}
+[26.481076] (-) TimerEvent: {}
+[26.581308] (-) TimerEvent: {}
+[26.652638] (sp_vision) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/commandgener.cpp.o\x1b[0m\n'}
+[26.681504] (-) TimerEvent: {}
+[26.781851] (-) TimerEvent: {}
+[26.882091] (-) TimerEvent: {}
+[26.982440] (-) TimerEvent: {}
+[27.082777] (-) TimerEvent: {}
+[27.183122] (-) TimerEvent: {}
+[27.283356] (-) TimerEvent: {}
+[27.383614] (-) TimerEvent: {}
+[27.483928] (-) TimerEvent: {}
+[27.584171] (-) TimerEvent: {}
+[27.684411] (-) TimerEvent: {}
+[27.784672] (-) TimerEvent: {}
+[27.884989] (-) TimerEvent: {}
+[27.985230] (-) TimerEvent: {}
+[28.085482] (-) TimerEvent: {}
+[28.185800] (-) TimerEvent: {}
+[28.286151] (-) TimerEvent: {}
+[28.386464] (-) TimerEvent: {}
+[28.486776] (-) TimerEvent: {}
+[28.587104] (-) TimerEvent: {}
+[28.687435] (-) TimerEvent: {}
+[28.787753] (-) TimerEvent: {}
+[28.888088] (-) TimerEvent: {}
+[28.988316] (-) TimerEvent: {}
+[29.088568] (-) TimerEvent: {}
+[29.188867] (-) TimerEvent: {}
+[29.289206] (-) TimerEvent: {}
+[29.389541] (-) TimerEvent: {}
+[29.489858] (-) TimerEvent: {}
+[29.590171] (-) TimerEvent: {}
+[29.690405] (-) TimerEvent: {}
+[29.790631] (-) TimerEvent: {}
+[29.890872] (-) TimerEvent: {}
+[29.991191] (-) TimerEvent: {}
+[30.091418] (-) TimerEvent: {}
+[30.191740] (-) TimerEvent: {}
+[30.291990] (-) TimerEvent: {}
+[30.392225] (-) TimerEvent: {}
+[30.492539] (-) TimerEvent: {}
+[30.592844] (-) TimerEvent: {}
+[30.693172] (-) TimerEvent: {}
+[30.793393] (-) TimerEvent: {}
+[30.893695] (-) TimerEvent: {}
+[30.993995] (-) TimerEvent: {}
+[31.094222] (-) TimerEvent: {}
+[31.194453] (-) TimerEvent: {}
+[31.294763] (-) TimerEvent: {}
+[31.395075] (-) TimerEvent: {}
+[31.495386] (-) TimerEvent: {}
+[31.595717] (-) TimerEvent: {}
+[31.696040] (-) TimerEvent: {}
+[31.796361] (-) TimerEvent: {}
+[31.896670] (-) TimerEvent: {}
+[31.913569] (sp_vision) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/mt_detector.cpp.o\x1b[0m\n'}
+[31.996848] (-) TimerEvent: {}
+[32.097163] (-) TimerEvent: {}
+[32.197415] (-) TimerEvent: {}
+[32.297734] (-) TimerEvent: {}
+[32.398070] (-) TimerEvent: {}
+[32.498396] (-) TimerEvent: {}
+[32.598652] (-) TimerEvent: {}
+[32.698969] (-) TimerEvent: {}
+[32.799203] (-) TimerEvent: {}
+[32.899455] (-) TimerEvent: {}
+[32.999707] (-) TimerEvent: {}
+[33.099921] (-) TimerEvent: {}
+[33.200151] (-) TimerEvent: {}
+[33.300398] (-) TimerEvent: {}
+[33.346723] (sp_vision) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/planner/planner.cpp.o\x1b[0m\n'}
+[33.400513] (-) TimerEvent: {}
+[33.500729] (-) TimerEvent: {}
+[33.601072] (-) TimerEvent: {}
+[33.701299] (-) TimerEvent: {}
+[33.801626] (-) TimerEvent: {}
+[33.901952] (-) TimerEvent: {}
+[34.002191] (-) TimerEvent: {}
+[34.102538] (-) TimerEvent: {}
+[34.202870] (-) TimerEvent: {}
+[34.303175] (-) TimerEvent: {}
+[34.403502] (-) TimerEvent: {}
+[34.503862] (-) TimerEvent: {}
+[34.604210] (-) TimerEvent: {}
+[34.704465] (-) TimerEvent: {}
+[34.804774] (-) TimerEvent: {}
+[34.905122] (-) TimerEvent: {}
+[35.005349] (-) TimerEvent: {}
+[35.105663] (-) TimerEvent: {}
+[35.205985] (-) TimerEvent: {}
+[35.306311] (-) TimerEvent: {}
+[35.406538] (-) TimerEvent: {}
+[35.506892] (-) TimerEvent: {}
+[35.607162] (-) TimerEvent: {}
+[35.707424] (-) TimerEvent: {}
+[35.807725] (-) TimerEvent: {}
+[35.908043] (-) TimerEvent: {}
+[36.008368] (-) TimerEvent: {}
+[36.108667] (-) TimerEvent: {}
+[36.208887] (-) TimerEvent: {}
+[36.309171] (-) TimerEvent: {}
+[36.409396] (-) TimerEvent: {}
+[36.509704] (-) TimerEvent: {}
+[36.609924] (-) TimerEvent: {}
+[36.710152] (-) TimerEvent: {}
+[36.810460] (-) TimerEvent: {}
+[36.910775] (-) TimerEvent: {}
+[37.011009] (-) TimerEvent: {}
+[37.111237] (-) TimerEvent: {}
+[37.211543] (-) TimerEvent: {}
+[37.311850] (-) TimerEvent: {}
+[37.412186] (-) TimerEvent: {}
+[37.512492] (-) TimerEvent: {}
+[37.612705] (-) TimerEvent: {}
+[37.713020] (-) TimerEvent: {}
+[37.813359] (-) TimerEvent: {}
+[37.913642] (-) TimerEvent: {}
+[38.013947] (-) TimerEvent: {}
+[38.114180] (-) TimerEvent: {}
+[38.214496] (-) TimerEvent: {}
+[38.314825] (-) TimerEvent: {}
+[38.415236] (-) TimerEvent: {}
+[38.515549] (-) TimerEvent: {}
+[38.615919] (-) TimerEvent: {}
+[38.716317] (-) TimerEvent: {}
+[38.816580] (-) TimerEvent: {}
+[38.916840] (-) TimerEvent: {}
+[39.017167] (-) TimerEvent: {}
+[39.117397] (-) TimerEvent: {}
+[39.217646] (-) TimerEvent: {}
+[39.317957] (-) TimerEvent: {}
+[39.418192] (-) TimerEvent: {}
+[39.518418] (-) TimerEvent: {}
+[39.615760] (sp_vision) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX static library libauto_aim.a\x1b[0m\n'}
+[39.618526] (-) TimerEvent: {}
+[39.702535] (sp_vision) StdoutLine: {'line': b'[ 59%] Built target auto_aim\n'}
+[39.718746] (-) TimerEvent: {}
+[39.722133] (sp_vision) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object tasks/auto_buff/CMakeFiles/auto_buff.dir/buff_type.cpp.o\x1b[0m\n'}
+[39.724201] (sp_vision) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/camera_detect_test.dir/tests/camera_detect_test.cpp.o\x1b[0m\n'}
+[39.725881] (sp_vision) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/auto_aim_test.dir/tests/auto_aim_test.cpp.o\x1b[0m\n'}
+[39.726028] (sp_vision) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/uav_debug.dir/src/uav_debug.cpp.o\x1b[0m\n'}
+[39.818997] (-) TimerEvent: {}
+[39.919270] (-) TimerEvent: {}
+[40.019592] (-) TimerEvent: {}
+[40.119856] (-) TimerEvent: {}
+[40.220113] (-) TimerEvent: {}
+[40.320336] (-) TimerEvent: {}
+[40.420589] (-) TimerEvent: {}
+[40.520913] (-) TimerEvent: {}
+[40.621183] (-) TimerEvent: {}
+[40.721413] (-) TimerEvent: {}
+[40.821751] (-) TimerEvent: {}
+[40.922092] (-) TimerEvent: {}
+[41.022415] (-) TimerEvent: {}
+[41.122736] (-) TimerEvent: {}
+[41.223075] (-) TimerEvent: {}
+[41.323402] (-) TimerEvent: {}
+[41.423719] (-) TimerEvent: {}
+[41.524048] (-) TimerEvent: {}
+[41.624285] (-) TimerEvent: {}
+[41.724600] (-) TimerEvent: {}
+[41.824922] (-) TimerEvent: {}
+[41.925290] (-) TimerEvent: {}
+[42.025623] (-) TimerEvent: {}
+[42.125943] (-) TimerEvent: {}
+[42.226286] (-) TimerEvent: {}
+[42.326556] (-) TimerEvent: {}
+[42.426877] (-) TimerEvent: {}
+[42.527232] (-) TimerEvent: {}
+[42.627487] (-) TimerEvent: {}
+[42.727806] (-) TimerEvent: {}
+[42.828125] (-) TimerEvent: {}
+[42.928373] (-) TimerEvent: {}
+[43.028998] (-) TimerEvent: {}
+[43.129288] (-) TimerEvent: {}
+[43.229597] (-) TimerEvent: {}
+[43.329878] (-) TimerEvent: {}
+[43.430184] (-) TimerEvent: {}
+[43.530483] (-) TimerEvent: {}
+[43.630763] (-) TimerEvent: {}
+[43.731105] (-) TimerEvent: {}
+[43.831329] (-) TimerEvent: {}
+[43.931582] (-) TimerEvent: {}
+[44.031821] (-) TimerEvent: {}
+[44.132054] (-) TimerEvent: {}
+[44.232268] (-) TimerEvent: {}
+[44.332490] (-) TimerEvent: {}
+[44.432738] (-) TimerEvent: {}
+[44.532983] (-) TimerEvent: {}
+[44.633207] (-) TimerEvent: {}
+[44.733446] (-) TimerEvent: {}
+[44.833692] (-) TimerEvent: {}
+[44.933907] (-) TimerEvent: {}
+[45.034182] (-) TimerEvent: {}
+[45.134503] (-) TimerEvent: {}
+[45.234809] (-) TimerEvent: {}
+[45.335134] (-) TimerEvent: {}
+[45.339082] (sp_vision) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object tasks/auto_buff/CMakeFiles/auto_buff.dir/buff_detector.cpp.o\x1b[0m\n'}
+[45.435303] (-) TimerEvent: {}
+[45.535549] (-) TimerEvent: {}
+[45.608999] (sp_vision) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX executable camera_detect_test\x1b[0m\n'}
+[45.635663] (-) TimerEvent: {}
+[45.735903] (-) TimerEvent: {}
+[45.836203] (-) TimerEvent: {}
+[45.936419] (-) TimerEvent: {}
+[46.036683] (-) TimerEvent: {}
+[46.049870] (sp_vision) StdoutLine: {'line': b'[ 64%] Built target camera_detect_test\n'}
+[46.071629] (sp_vision) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/camera_thread_test.dir/tests/camera_thread_test.cpp.o\x1b[0m\n'}
+[46.136866] (-) TimerEvent: {}
+[46.237327] (-) TimerEvent: {}
+[46.337699] (-) TimerEvent: {}
+[46.438020] (-) TimerEvent: {}
+[46.538257] (-) TimerEvent: {}
+[46.638569] (-) TimerEvent: {}
+[46.738827] (-) TimerEvent: {}
+[46.839183] (-) TimerEvent: {}
+[46.939498] (-) TimerEvent: {}
+[47.039813] (-) TimerEvent: {}
+[47.071142] (sp_vision) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable auto_aim_test\x1b[0m\n'}
+[47.139930] (-) TimerEvent: {}
+[47.240258] (-) TimerEvent: {}
+[47.340491] (-) TimerEvent: {}
+[47.440741] (-) TimerEvent: {}
+[47.501951] (sp_vision) StdoutLine: {'line': b'[ 66%] Built target auto_aim_test\n'}
+[47.510084] (sp_vision) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX executable uav_debug\x1b[0m\n'}
+[47.517705] (sp_vision) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/detector_video_test.dir/tests/detector_video_test.cpp.o\x1b[0m\n'}
+[47.540843] (-) TimerEvent: {}
+[47.641193] (-) TimerEvent: {}
+[47.741595] (-) TimerEvent: {}
+[47.841983] (-) TimerEvent: {}
+[47.942409] (-) TimerEvent: {}
+[47.981956] (sp_vision) StdoutLine: {'line': b'[ 68%] Built target uav_debug\n'}
+[48.003340] (sp_vision) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/usbcamera_detect_test.dir/tests/usbcamera_detect_test.cpp.o\x1b[0m\n'}
+[48.042534] (-) TimerEvent: {}
+[48.142933] (-) TimerEvent: {}
+[48.243211] (-) TimerEvent: {}
+[48.343519] (-) TimerEvent: {}
+[48.443899] (-) TimerEvent: {}
+[48.544297] (-) TimerEvent: {}
+[48.644591] (-) TimerEvent: {}
+[48.744874] (-) TimerEvent: {}
+[48.845234] (-) TimerEvent: {}
+[48.945499] (-) TimerEvent: {}
+[49.045829] (-) TimerEvent: {}
+[49.146171] (-) TimerEvent: {}
+[49.246511] (-) TimerEvent: {}
+[49.346781] (-) TimerEvent: {}
+[49.447022] (-) TimerEvent: {}
+[49.547253] (-) TimerEvent: {}
+[49.647478] (-) TimerEvent: {}
+[49.747804] (-) TimerEvent: {}
+[49.848093] (-) TimerEvent: {}
+[49.948409] (-) TimerEvent: {}
+[50.048726] (-) TimerEvent: {}
+[50.148974] (-) TimerEvent: {}
+[50.249206] (-) TimerEvent: {}
+[50.349451] (-) TimerEvent: {}
+[50.449706] (-) TimerEvent: {}
+[50.486356] (sp_vision) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX executable detector_video_test\x1b[0m\n'}
+[50.549821] (-) TimerEvent: {}
+[50.650078] (-) TimerEvent: {}
+[50.750297] (-) TimerEvent: {}
+[50.850570] (-) TimerEvent: {}
+[50.870091] (sp_vision) StdoutLine: {'line': b'[ 68%] Built target detector_video_test\n'}
+[50.891461] (sp_vision) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/handeye_test.dir/tests/handeye_test.cpp.o\x1b[0m\n'}
+[50.950712] (-) TimerEvent: {}
+[51.051007] (-) TimerEvent: {}
+[51.151288] (-) TimerEvent: {}
+[51.251582] (-) TimerEvent: {}
+[51.351883] (-) TimerEvent: {}
+[51.452288] (-) TimerEvent: {}
+[51.552579] (-) TimerEvent: {}
+[51.652890] (-) TimerEvent: {}
+[51.753295] (-) TimerEvent: {}
+[51.853596] (-) TimerEvent: {}
+[51.863136] (sp_vision) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object tasks/auto_buff/CMakeFiles/auto_buff.dir/buff_solver.cpp.o\x1b[0m\n'}
+[51.953696] (-) TimerEvent: {}
+[52.054087] (-) TimerEvent: {}
+[52.154356] (-) TimerEvent: {}
+[52.254690] (-) TimerEvent: {}
+[52.355087] (-) TimerEvent: {}
+[52.455375] (-) TimerEvent: {}
+[52.555608] (-) TimerEvent: {}
+[52.655843] (-) TimerEvent: {}
+[52.756143] (-) TimerEvent: {}
+[52.856367] (-) TimerEvent: {}
+[52.956609] (-) TimerEvent: {}
+[53.056919] (-) TimerEvent: {}
+[53.069852] (sp_vision) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX executable camera_thread_test\x1b[0m\n'}
+[53.157109] (-) TimerEvent: {}
+[53.257431] (-) TimerEvent: {}
+[53.337266] (sp_vision) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX executable usbcamera_detect_test\x1b[0m\n'}
+[53.357561] (-) TimerEvent: {}
+[53.457953] (-) TimerEvent: {}
+[53.510283] (sp_vision) StdoutLine: {'line': b'[ 71%] Built target camera_thread_test\n'}
+[53.530754] (sp_vision) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/minimum_vision_system.dir/tests/minimum_vision_system.cpp.o\x1b[0m\n'}
+[53.558191] (-) TimerEvent: {}
+[53.658533] (-) TimerEvent: {}
+[53.750625] (sp_vision) StdoutLine: {'line': b'[ 72%] Built target usbcamera_detect_test\n'}
+[53.758710] (-) TimerEvent: {}
+[53.772214] (sp_vision) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/gimbal_test.dir/tests/gimbal_test.cpp.o\x1b[0m\n'}
+[53.858898] (-) TimerEvent: {}
+[53.959198] (-) TimerEvent: {}
+[54.059441] (-) TimerEvent: {}
+[54.159752] (-) TimerEvent: {}
+[54.260084] (-) TimerEvent: {}
+[54.360320] (-) TimerEvent: {}
+[54.460641] (-) TimerEvent: {}
+[54.560875] (-) TimerEvent: {}
+[54.661193] (-) TimerEvent: {}
+[54.761523] (-) TimerEvent: {}
+[54.861855] (-) TimerEvent: {}
+[54.962206] (-) TimerEvent: {}
+[55.062534] (-) TimerEvent: {}
+[55.162850] (-) TimerEvent: {}
+[55.263200] (-) TimerEvent: {}
+[55.275832] (sp_vision) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object tasks/auto_buff/CMakeFiles/auto_buff.dir/buff_aimer.cpp.o\x1b[0m\n'}
+[55.363294] (-) TimerEvent: {}
+[55.463544] (-) TimerEvent: {}
+[55.563863] (-) TimerEvent: {}
+[55.664083] (-) TimerEvent: {}
+[55.764317] (-) TimerEvent: {}
+[55.864705] (-) TimerEvent: {}
+[55.965049] (-) TimerEvent: {}
+[56.065276] (-) TimerEvent: {}
+[56.165534] (-) TimerEvent: {}
+[56.265842] (-) TimerEvent: {}
+[56.366094] (-) TimerEvent: {}
+[56.466317] (-) TimerEvent: {}
+[56.566628] (-) TimerEvent: {}
+[56.666942] (-) TimerEvent: {}
+[56.767276] (-) TimerEvent: {}
+[56.867594] (-) TimerEvent: {}
+[56.970202] (-) TimerEvent: {}
+[57.070521] (-) TimerEvent: {}
+[57.170832] (-) TimerEvent: {}
+[57.271151] (-) TimerEvent: {}
+[57.371442] (-) TimerEvent: {}
+[57.382610] (sp_vision) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX executable handeye_test\x1b[0m\n'}
+[57.471623] (-) TimerEvent: {}
+[57.571932] (-) TimerEvent: {}
+[57.672281] (-) TimerEvent: {}
+[57.772553] (-) TimerEvent: {}
+[57.785733] (sp_vision) StdoutLine: {'line': b'[ 74%] Built target handeye_test\n'}
+[57.809369] (sp_vision) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/planner_test.dir/tests/planner_test.cpp.o\x1b[0m\n'}
+[57.872762] (-) TimerEvent: {}
+[57.973123] (-) TimerEvent: {}
+[58.073406] (-) TimerEvent: {}
+[58.173785] (-) TimerEvent: {}
+[58.274172] (-) TimerEvent: {}
+[58.374464] (-) TimerEvent: {}
+[58.474865] (-) TimerEvent: {}
+[58.575262] (-) TimerEvent: {}
+[58.675567] (-) TimerEvent: {}
+[58.775955] (-) TimerEvent: {}
+[58.876242] (-) TimerEvent: {}
+[58.976591] (-) TimerEvent: {}
+[59.076971] (-) TimerEvent: {}
+[59.177363] (-) TimerEvent: {}
+[59.277757] (-) TimerEvent: {}
+[59.378135] (-) TimerEvent: {}
+[59.478522] (-) TimerEvent: {}
+[59.578925] (-) TimerEvent: {}
+[59.679209] (-) TimerEvent: {}
+[59.680159] (sp_vision) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX executable gimbal_test\x1b[0m\n'}
+[59.779420] (-) TimerEvent: {}
+[59.879799] (-) TimerEvent: {}
+[59.980159] (-) TimerEvent: {}
+[60.021401] (sp_vision) StdoutLine: {'line': b'[ 76%] Built target gimbal_test\n'}
+[60.044808] (sp_vision) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/planner_test_offline.dir/tests/planner_test_offline.cpp.o\x1b[0m\n'}
+[60.080390] (-) TimerEvent: {}
+[60.180786] (-) TimerEvent: {}
+[60.281166] (-) TimerEvent: {}
+[60.381575] (-) TimerEvent: {}
+[60.481969] (-) TimerEvent: {}
+[60.582362] (-) TimerEvent: {}
+[60.682752] (-) TimerEvent: {}
+[60.783161] (-) TimerEvent: {}
+[60.883449] (-) TimerEvent: {}
+[60.983839] (-) TimerEvent: {}
+[61.084206] (-) TimerEvent: {}
+[61.184590] (-) TimerEvent: {}
+[61.284971] (-) TimerEvent: {}
+[61.298072] (sp_vision) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX executable minimum_vision_system\x1b[0m\n'}
+[61.385181] (-) TimerEvent: {}
+[61.485506] (-) TimerEvent: {}
+[61.585895] (-) TimerEvent: {}
+[61.686300] (-) TimerEvent: {}
+[61.772982] (sp_vision) StdoutLine: {'line': b'[ 77%] Built target minimum_vision_system\n'}
+[61.786397] (-) TimerEvent: {}
+[61.794409] (sp_vision) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/sentry.dir/src/sentry.cpp.o\x1b[0m\n'}
+[61.886571] (-) TimerEvent: {}
+[61.986895] (-) TimerEvent: {}
+[62.087165] (-) TimerEvent: {}
+[62.187457] (-) TimerEvent: {}
+[62.287768] (-) TimerEvent: {}
+[62.388100] (-) TimerEvent: {}
+[62.488317] (-) TimerEvent: {}
+[62.588562] (-) TimerEvent: {}
+[62.641014] (sp_vision) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object tasks/auto_buff/CMakeFiles/auto_buff.dir/buff_target.cpp.o\x1b[0m\n'}
+[62.688733] (-) TimerEvent: {}
+[62.789064] (-) TimerEvent: {}
+[62.889388] (-) TimerEvent: {}
+[62.989709] (-) TimerEvent: {}
+[63.090051] (-) TimerEvent: {}
+[63.190297] (-) TimerEvent: {}
+[63.290661] (-) TimerEvent: {}
+[63.391013] (-) TimerEvent: {}
+[63.491258] (-) TimerEvent: {}
+[63.591568] (-) TimerEvent: {}
+[63.691903] (-) TimerEvent: {}
+[63.792246] (-) TimerEvent: {}
+[63.892579] (-) TimerEvent: {}
+[63.978841] (sp_vision) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX executable planner_test\x1b[0m\n'}
+[63.992757] (-) TimerEvent: {}
+[64.093080] (-) TimerEvent: {}
+[64.193399] (-) TimerEvent: {}
+[64.293665] (-) TimerEvent: {}
+[64.348518] (sp_vision) StdoutLine: {'line': b'[ 79%] Built target planner_test\n'}
+[64.369074] (sp_vision) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/sentry_bp.dir/src/sentry_bp.cpp.o\x1b[0m\n'}
+[64.393861] (-) TimerEvent: {}
+[64.494269] (-) TimerEvent: {}
+[64.594646] (-) TimerEvent: {}
+[64.695031] (-) TimerEvent: {}
+[64.795465] (-) TimerEvent: {}
+[64.895859] (-) TimerEvent: {}
+[64.996170] (-) TimerEvent: {}
+[65.096591] (-) TimerEvent: {}
+[65.196984] (-) TimerEvent: {}
+[65.297384] (-) TimerEvent: {}
+[65.397766] (-) TimerEvent: {}
+[65.498190] (-) TimerEvent: {}
+[65.598561] (-) TimerEvent: {}
+[65.698849] (-) TimerEvent: {}
+[65.799229] (-) TimerEvent: {}
+[65.899537] (-) TimerEvent: {}
+[65.999845] (-) TimerEvent: {}
+[66.100136] (-) TimerEvent: {}
+[66.200453] (-) TimerEvent: {}
+[66.211242] (sp_vision) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX executable planner_test_offline\x1b[0m\n'}
+[66.300577] (-) TimerEvent: {}
+[66.400969] (-) TimerEvent: {}
+[66.501380] (-) TimerEvent: {}
+[66.564322] (sp_vision) StdoutLine: {'line': b'[ 81%] Built target planner_test_offline\n'}
+[66.584544] (sp_vision) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/sentry_debug.dir/src/sentry_debug.cpp.o\x1b[0m\n'}
+[66.601499] (-) TimerEvent: {}
+[66.701893] (-) TimerEvent: {}
+[66.802317] (-) TimerEvent: {}
+[66.902631] (-) TimerEvent: {}
+[67.003025] (-) TimerEvent: {}
+[67.103322] (-) TimerEvent: {}
+[67.203674] (-) TimerEvent: {}
+[67.303992] (-) TimerEvent: {}
+[67.404293] (-) TimerEvent: {}
+[67.504614] (-) TimerEvent: {}
+[67.605014] (-) TimerEvent: {}
+[67.705334] (-) TimerEvent: {}
+[67.805634] (-) TimerEvent: {}
+[67.906016] (-) TimerEvent: {}
+[68.006304] (-) TimerEvent: {}
+[68.106605] (-) TimerEvent: {}
+[68.206991] (-) TimerEvent: {}
+[68.307293] (-) TimerEvent: {}
+[68.407615] (-) TimerEvent: {}
+[68.508000] (-) TimerEvent: {}
+[68.608296] (-) TimerEvent: {}
+[68.708603] (-) TimerEvent: {}
+[68.809004] (-) TimerEvent: {}
+[68.909303] (-) TimerEvent: {}
+[69.009588] (-) TimerEvent: {}
+[69.109966] (-) TimerEvent: {}
+[69.210361] (-) TimerEvent: {}
+[69.310710] (-) TimerEvent: {}
+[69.411024] (-) TimerEvent: {}
+[69.511303] (-) TimerEvent: {}
+[69.611638] (-) TimerEvent: {}
+[69.711978] (-) TimerEvent: {}
+[69.773690] (sp_vision) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable sentry\x1b[0m\n'}
+[69.812198] (-) TimerEvent: {}
+[69.912485] (-) TimerEvent: {}
+[70.012877] (-) TimerEvent: {}
+[70.113277] (-) TimerEvent: {}
+[70.213674] (-) TimerEvent: {}
+[70.313972] (-) TimerEvent: {}
+[70.369950] (sp_vision) StdoutLine: {'line': b'[ 83%] Built target sentry\n'}
+[70.392078] (sp_vision) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/sentry_multithread.dir/src/sentry_multithread.cpp.o\x1b[0m\n'}
+[70.414168] (-) TimerEvent: {}
+[70.514547] (-) TimerEvent: {}
+[70.614914] (-) TimerEvent: {}
+[70.715341] (-) TimerEvent: {}
+[70.815726] (-) TimerEvent: {}
+[70.916081] (-) TimerEvent: {}
+[71.016365] (-) TimerEvent: {}
+[71.116667] (-) TimerEvent: {}
+[71.217049] (-) TimerEvent: {}
+[71.317438] (-) TimerEvent: {}
+[71.417731] (-) TimerEvent: {}
+[71.518122] (-) TimerEvent: {}
+[71.618521] (-) TimerEvent: {}
+[71.718908] (-) TimerEvent: {}
+[71.819306] (-) TimerEvent: {}
+[71.919694] (-) TimerEvent: {}
+[71.955557] (sp_vision) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object tasks/auto_buff/CMakeFiles/auto_buff.dir/yolo11_buff.cpp.o\x1b[0m\n'}
+[72.019907] (-) TimerEvent: {}
+[72.120302] (-) TimerEvent: {}
+[72.220701] (-) TimerEvent: {}
+[72.321070] (-) TimerEvent: {}
+[72.421475] (-) TimerEvent: {}
+[72.509923] (sp_vision) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable sentry_bp\x1b[0m\n'}
+[72.521615] (-) TimerEvent: {}
+[72.621990] (-) TimerEvent: {}
+[72.722282] (-) TimerEvent: {}
+[72.822668] (-) TimerEvent: {}
+[72.923083] (-) TimerEvent: {}
+[73.023384] (-) TimerEvent: {}
+[73.071297] (sp_vision) StdoutLine: {'line': b'[ 85%] Built target sentry_bp\n'}
+[73.090760] (sp_vision) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding CXX object CMakeFiles/publish_test.dir/tests/publish_test.cpp.o\x1b[0m\n'}
+[73.123506] (-) TimerEvent: {}
+[73.223849] (-) TimerEvent: {}
+[73.324233] (-) TimerEvent: {}
+[73.424634] (-) TimerEvent: {}
+[73.524962] (-) TimerEvent: {}
+[73.625400] (-) TimerEvent: {}
+[73.725742] (-) TimerEvent: {}
+[73.826069] (-) TimerEvent: {}
+[73.926397] (-) TimerEvent: {}
+[74.026665] (-) TimerEvent: {}
+[74.126978] (-) TimerEvent: {}
+[74.227309] (-) TimerEvent: {}
+[74.327631] (-) TimerEvent: {}
+[74.427949] (-) TimerEvent: {}
+[74.528275] (-) TimerEvent: {}
+[74.628582] (-) TimerEvent: {}
+[74.728839] (-) TimerEvent: {}
+[74.829159] (-) TimerEvent: {}
+[74.929488] (-) TimerEvent: {}
+[75.021280] (sp_vision) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable sentry_debug\x1b[0m\n'}
+[75.029606] (-) TimerEvent: {}
+[75.129929] (-) TimerEvent: {}
+[75.230211] (-) TimerEvent: {}
+[75.330501] (-) TimerEvent: {}
+[75.430840] (-) TimerEvent: {}
+[75.531162] (-) TimerEvent: {}
+[75.609874] (sp_vision) StdoutLine: {'line': b'[ 87%] Built target sentry_debug\n'}
+[75.631267] (-) TimerEvent: {}
+[75.731580] (-) TimerEvent: {}
+[75.831980] (-) TimerEvent: {}
+[75.932376] (-) TimerEvent: {}
+[76.032772] (-) TimerEvent: {}
+[76.133157] (-) TimerEvent: {}
+[76.233436] (-) TimerEvent: {}
+[76.333816] (-) TimerEvent: {}
+[76.434203] (-) TimerEvent: {}
+[76.534509] (-) TimerEvent: {}
+[76.634895] (-) TimerEvent: {}
+[76.735219] (-) TimerEvent: {}
+[76.835537] (-) TimerEvent: {}
+[76.935925] (-) TimerEvent: {}
+[77.039558] (-) TimerEvent: {}
+[77.139850] (-) TimerEvent: {}
+[77.240160] (-) TimerEvent: {}
+[77.340477] (-) TimerEvent: {}
+[77.440793] (-) TimerEvent: {}
+[77.541100] (-) TimerEvent: {}
+[77.641410] (-) TimerEvent: {}
+[77.741724] (-) TimerEvent: {}
+[77.842059] (-) TimerEvent: {}
+[77.942376] (-) TimerEvent: {}
+[78.042702] (-) TimerEvent: {}
+[78.143008] (-) TimerEvent: {}
+[78.224330] (sp_vision) StdoutLine: {'line': b'[ 87%] Built target auto_buff\n'}
+[78.243253] (-) TimerEvent: {}
+[78.243542] (sp_vision) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/mt_standard.dir/src/mt_standard.cpp.o\x1b[0m\n'}
+[78.243650] (sp_vision) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding CXX object CMakeFiles/standard.dir/src/standard.cpp.o\x1b[0m\n'}
+[78.296424] (sp_vision) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking CXX executable sentry_multithread\x1b[0m\n'}
+[78.343447] (-) TimerEvent: {}
+[78.443806] (-) TimerEvent: {}
+[78.544133] (-) TimerEvent: {}
+[78.644473] (-) TimerEvent: {}
+[78.744819] (-) TimerEvent: {}
+[78.845110] (-) TimerEvent: {}
+[78.883772] (sp_vision) StdoutLine: {'line': b'[ 89%] Built target sentry_multithread\n'}
+[78.906474] (sp_vision) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/standard_mpc.dir/src/standard_mpc.cpp.o\x1b[0m\n'}
+[78.945345] (-) TimerEvent: {}
+[79.045634] (-) TimerEvent: {}
+[79.145949] (-) TimerEvent: {}
+[79.246333] (-) TimerEvent: {}
+[79.346766] (-) TimerEvent: {}
+[79.447171] (-) TimerEvent: {}
+[79.547575] (-) TimerEvent: {}
+[79.647975] (-) TimerEvent: {}
+[79.748380] (-) TimerEvent: {}
+[79.848766] (-) TimerEvent: {}
+[79.925995] (sp_vision) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable publish_test\x1b[0m\n'}
+[79.948984] (-) TimerEvent: {}
+[80.049382] (-) TimerEvent: {}
+[80.149742] (-) TimerEvent: {}
+[80.250043] (-) TimerEvent: {}
+[80.315384] (sp_vision) StdoutLine: {'line': b'[ 90%] Built target publish_test\n'}
+[80.336387] (sp_vision) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object CMakeFiles/auto_aim_debug_mpc.dir/src/auto_aim_debug_mpc.cpp.o\x1b[0m\n'}
+[80.350253] (-) TimerEvent: {}
+[80.450559] (-) TimerEvent: {}
+[80.550885] (-) TimerEvent: {}
+[80.651292] (-) TimerEvent: {}
+[80.751676] (-) TimerEvent: {}
+[80.852070] (-) TimerEvent: {}
+[80.952411] (-) TimerEvent: {}
+[81.052806] (-) TimerEvent: {}
+[81.153202] (-) TimerEvent: {}
+[81.253618] (-) TimerEvent: {}
+[81.354021] (-) TimerEvent: {}
+[81.454448] (-) TimerEvent: {}
+[81.554838] (-) TimerEvent: {}
+[81.655220] (-) TimerEvent: {}
+[81.755609] (-) TimerEvent: {}
+[81.856003] (-) TimerEvent: {}
+[81.956292] (-) TimerEvent: {}
+[82.056670] (-) TimerEvent: {}
+[82.156969] (-) TimerEvent: {}
+[82.257360] (-) TimerEvent: {}
+[82.357745] (-) TimerEvent: {}
+[82.458138] (-) TimerEvent: {}
+[82.558524] (-) TimerEvent: {}
+[82.658887] (-) TimerEvent: {}
+[82.759202] (-) TimerEvent: {}
+[82.859599] (-) TimerEvent: {}
+[82.959948] (-) TimerEvent: {}
+[83.060305] (-) TimerEvent: {}
+[83.160651] (-) TimerEvent: {}
+[83.260985] (-) TimerEvent: {}
+[83.361309] (-) TimerEvent: {}
+[83.461627] (-) TimerEvent: {}
+[83.561871] (-) TimerEvent: {}
+[83.662178] (-) TimerEvent: {}
+[83.762510] (-) TimerEvent: {}
+[83.862847] (-) TimerEvent: {}
+[83.963184] (-) TimerEvent: {}
+[84.063701] (-) TimerEvent: {}
+[84.164139] (-) TimerEvent: {}
+[84.264364] (-) TimerEvent: {}
+[84.364671] (-) TimerEvent: {}
+[84.464994] (-) TimerEvent: {}
+[84.565311] (-) TimerEvent: {}
+[84.631580] (sp_vision) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX executable standard\x1b[0m\n'}
+[84.665402] (-) TimerEvent: {}
+[84.765715] (-) TimerEvent: {}
+[84.866027] (-) TimerEvent: {}
+[84.966263] (-) TimerEvent: {}
+[85.066522] (-) TimerEvent: {}
+[85.140430] (sp_vision) StdoutLine: {'line': b'[ 91%] Built target standard\n'}
+[85.163394] (sp_vision) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object CMakeFiles/mt_auto_aim_debug.dir/src/mt_auto_aim_debug.cpp.o\x1b[0m\n'}
+[85.166721] (-) TimerEvent: {}
+[85.267078] (-) TimerEvent: {}
+[85.367355] (-) TimerEvent: {}
+[85.467655] (-) TimerEvent: {}
+[85.568031] (-) TimerEvent: {}
+[85.668326] (-) TimerEvent: {}
+[85.768643] (-) TimerEvent: {}
+[85.847639] (sp_vision) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable mt_standard\x1b[0m\n'}
+[85.868852] (-) TimerEvent: {}
+[85.969216] (-) TimerEvent: {}
+[86.069625] (-) TimerEvent: {}
+[86.170007] (-) TimerEvent: {}
+[86.270419] (-) TimerEvent: {}
+[86.367252] (sp_vision) StdoutLine: {'line': b'[ 92%] Built target mt_standard\n'}
+[86.370512] (-) TimerEvent: {}
+[86.389328] (sp_vision) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object CMakeFiles/auto_buff_debug.dir/src/auto_buff_debug.cpp.o\x1b[0m\n'}
+[86.470736] (-) TimerEvent: {}
+[86.571105] (-) TimerEvent: {}
+[86.581162] (sp_vision) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable standard_mpc\x1b[0m\n'}
+[86.671190] (-) TimerEvent: {}
+[86.771422] (-) TimerEvent: {}
+[86.871757] (-) TimerEvent: {}
+[86.972021] (-) TimerEvent: {}
+[87.072316] (-) TimerEvent: {}
+[87.094107] (sp_vision) StdoutLine: {'line': b'[ 93%] Built target standard_mpc\n'}
+[87.116834] (sp_vision) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding CXX object CMakeFiles/auto_buff_debug_mpc.dir/src/auto_buff_debug_mpc.cpp.o\x1b[0m\n'}
+[87.172416] (-) TimerEvent: {}
+[87.272682] (-) TimerEvent: {}
+[87.372961] (-) TimerEvent: {}
+[87.388910] (sp_vision) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable auto_aim_debug_mpc\x1b[0m\n'}
+[87.473067] (-) TimerEvent: {}
+[87.573336] (-) TimerEvent: {}
+[87.673614] (-) TimerEvent: {}
+[87.773897] (-) TimerEvent: {}
+[87.874205] (-) TimerEvent: {}
+[87.895678] (sp_vision) StdoutLine: {'line': b'[ 95%] Built target auto_aim_debug_mpc\n'}
+[87.919902] (sp_vision) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object CMakeFiles/uav.dir/src/uav.cpp.o\x1b[0m\n'}
+[87.974307] (-) TimerEvent: {}
+[88.074584] (-) TimerEvent: {}
+[88.174863] (-) TimerEvent: {}
+[88.275137] (-) TimerEvent: {}
+[88.375413] (-) TimerEvent: {}
+[88.475688] (-) TimerEvent: {}
+[88.575959] (-) TimerEvent: {}
+[88.676248] (-) TimerEvent: {}
+[88.776541] (-) TimerEvent: {}
+[88.876819] (-) TimerEvent: {}
+[88.977098] (-) TimerEvent: {}
+[89.077384] (-) TimerEvent: {}
+[89.177669] (-) TimerEvent: {}
+[89.277963] (-) TimerEvent: {}
+[89.378288] (-) TimerEvent: {}
+[89.478570] (-) TimerEvent: {}
+[89.578853] (-) TimerEvent: {}
+[89.679126] (-) TimerEvent: {}
+[89.779386] (-) TimerEvent: {}
+[89.879603] (-) TimerEvent: {}
+[89.979872] (-) TimerEvent: {}
+[90.080180] (-) TimerEvent: {}
+[90.180413] (-) TimerEvent: {}
+[90.280668] (-) TimerEvent: {}
+[90.380984] (-) TimerEvent: {}
+[90.481221] (-) TimerEvent: {}
+[90.581458] (-) TimerEvent: {}
+[90.681695] (-) TimerEvent: {}
+[90.782010] (-) TimerEvent: {}
+[90.882260] (-) TimerEvent: {}
+[90.982487] (-) TimerEvent: {}
+[91.082719] (-) TimerEvent: {}
+[91.182960] (-) TimerEvent: {}
+[91.283210] (-) TimerEvent: {}
+[91.383513] (-) TimerEvent: {}
+[91.483877] (-) TimerEvent: {}
+[91.584186] (-) TimerEvent: {}
+[91.684493] (-) TimerEvent: {}
+[91.784810] (-) TimerEvent: {}
+[91.885130] (-) TimerEvent: {}
+[91.985447] (-) TimerEvent: {}
+[92.085761] (-) TimerEvent: {}
+[92.186075] (-) TimerEvent: {}
+[92.286305] (-) TimerEvent: {}
+[92.386562] (-) TimerEvent: {}
+[92.486873] (-) TimerEvent: {}
+[92.587179] (-) TimerEvent: {}
+[92.687403] (-) TimerEvent: {}
+[92.787710] (-) TimerEvent: {}
+[92.888028] (-) TimerEvent: {}
+[92.988261] (-) TimerEvent: {}
+[93.088556] (-) TimerEvent: {}
+[93.188867] (-) TimerEvent: {}
+[93.237927] (sp_vision) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable mt_auto_aim_debug\x1b[0m\n'}
+[93.289046] (-) TimerEvent: {}
+[93.389362] (-) TimerEvent: {}
+[93.489683] (-) TimerEvent: {}
+[93.589990] (-) TimerEvent: {}
+[93.690321] (-) TimerEvent: {}
+[93.755945] (sp_vision) StdoutLine: {'line': b'[ 96%] Built target mt_auto_aim_debug\n'}
+[93.778464] (sp_vision) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding CXX object CMakeFiles/auto_buff_test.dir/tests/auto_buff_test.cpp.o\x1b[0m\n'}
+[93.790441] (-) TimerEvent: {}
+[93.890732] (-) TimerEvent: {}
+[93.991048] (-) TimerEvent: {}
+[94.084942] (sp_vision) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX executable auto_buff_debug\x1b[0m\n'}
+[94.091174] (-) TimerEvent: {}
+[94.191451] (-) TimerEvent: {}
+[94.291777] (-) TimerEvent: {}
+[94.392109] (-) TimerEvent: {}
+[94.492475] (-) TimerEvent: {}
+[94.529337] (sp_vision) StdoutLine: {'line': b'[ 98%] Built target auto_buff_debug\n'}
+[94.592655] (-) TimerEvent: {}
+[94.671935] (sp_vision) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX executable auto_buff_debug_mpc\x1b[0m\n'}
+[94.692828] (-) TimerEvent: {}
+[94.793141] (-) TimerEvent: {}
+[94.893466] (-) TimerEvent: {}
+[94.993789] (-) TimerEvent: {}
+[95.094046] (-) TimerEvent: {}
+[95.104755] (sp_vision) StdoutLine: {'line': b'[ 98%] Built target auto_buff_debug_mpc\n'}
+[95.194223] (-) TimerEvent: {}
+[95.294545] (-) TimerEvent: {}
+[95.394849] (-) TimerEvent: {}
+[95.407667] (sp_vision) StdoutLine: {'line': b'[ 99%] \x1b[32m\x1b[1mLinking CXX executable uav\x1b[0m\n'}
+[95.495015] (-) TimerEvent: {}
+[95.595328] (-) TimerEvent: {}
+[95.695646] (-) TimerEvent: {}
+[95.795979] (-) TimerEvent: {}
+[95.882130] (sp_vision) StdoutLine: {'line': b'[ 99%] Built target uav\n'}
+[95.896194] (-) TimerEvent: {}
+[95.996512] (-) TimerEvent: {}
+[96.096801] (-) TimerEvent: {}
+[96.197163] (-) TimerEvent: {}
+[96.297517] (-) TimerEvent: {}
+[96.397756] (-) TimerEvent: {}
+[96.497973] (-) TimerEvent: {}
+[96.598193] (-) TimerEvent: {}
+[96.698422] (-) TimerEvent: {}
+[96.798644] (-) TimerEvent: {}
+[96.898899] (-) TimerEvent: {}
+[96.999170] (-) TimerEvent: {}
+[97.099392] (-) TimerEvent: {}
+[97.199716] (-) TimerEvent: {}
+[97.300019] (-) TimerEvent: {}
+[97.400332] (-) TimerEvent: {}
+[97.500577] (-) TimerEvent: {}
+[97.600851] (-) TimerEvent: {}
+[97.701205] (-) TimerEvent: {}
+[97.801429] (-) TimerEvent: {}
+[97.901693] (-) TimerEvent: {}
+[98.001931] (-) TimerEvent: {}
+[98.102249] (-) TimerEvent: {}
+[98.202589] (-) TimerEvent: {}
+[98.302908] (-) TimerEvent: {}
+[98.403255] (-) TimerEvent: {}
+[98.503526] (-) TimerEvent: {}
+[98.603841] (-) TimerEvent: {}
+[98.704097] (-) TimerEvent: {}
+[98.804398] (-) TimerEvent: {}
+[98.904716] (-) TimerEvent: {}
+[99.005014] (-) TimerEvent: {}
+[99.105247] (-) TimerEvent: {}
+[99.205489] (-) TimerEvent: {}
+[99.305797] (-) TimerEvent: {}
+[99.406109] (-) TimerEvent: {}
+[99.506412] (-) TimerEvent: {}
+[99.606711] (-) TimerEvent: {}
+[99.707025] (-) TimerEvent: {}
+[99.807349] (-) TimerEvent: {}
+[99.907657] (-) TimerEvent: {}
+[100.007944] (-) TimerEvent: {}
+[100.108172] (-) TimerEvent: {}
+[100.208386] (-) TimerEvent: {}
+[100.308627] (-) TimerEvent: {}
+[100.408944] (-) TimerEvent: {}
+[100.509307] (-) TimerEvent: {}
+[100.609642] (-) TimerEvent: {}
+[100.709971] (-) TimerEvent: {}
+[100.810304] (-) TimerEvent: {}
+[100.910655] (-) TimerEvent: {}
+[101.010964] (-) TimerEvent: {}
+[101.111290] (-) TimerEvent: {}
+[101.211623] (-) TimerEvent: {}
+[101.312024] (-) TimerEvent: {}
+[101.317384] (sp_vision) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable auto_buff_test\x1b[0m\n'}
+[101.412200] (-) TimerEvent: {}
+[101.512554] (-) TimerEvent: {}
+[101.612963] (-) TimerEvent: {}
+[101.707423] (sp_vision) StdoutLine: {'line': b'[100%] Built target auto_buff_test\n'}
+[101.713154] (-) TimerEvent: {}
+[101.719617] (sp_vision) CommandEnded: {'returncode': 0}
+[101.731863] (sp_vision) JobEnded: {'identifier': 'sp_vision', 'rc': 0}
+[101.732690] (-) EventReactorShutdown: {}

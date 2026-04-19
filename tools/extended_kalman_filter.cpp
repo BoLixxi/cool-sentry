@@ -1,7 +1,7 @@
 #include "extended_kalman_filter.hpp"
 
 #include <numeric>
-
+//卡尔曼滤波 (EKF)理解它是如何根据目标过去的位置，预测出子弹飞行到目标所需的时间后，目标会在哪里的。
 namespace tools
 {
 ExtendedKalmanFilter::ExtendedKalmanFilter(

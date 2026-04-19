@@ -6,7 +6,8 @@
 
 #include "tools/logger.hpp"
 #include "tools/math_tools.hpp"
-
+//(解算器): 使用 PnP 算法将 2D 图像坐标转换为真实的 3D 物理世界坐标。
+//这需要你理解相机坐标系、云台坐标系和世界坐标系的关系。
 namespace auto_aim
 {
 constexpr double LIGHTBAR_LENGTH = 56e-3;     // m

@@ -1,0 +1,130 @@
+[0.008s] Invoking command in '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision': /usr/bin/cmake /home/xiaoli/Desktop/sp_vision_25-main -DCMAKE_INSTALL_PREFIX=/home/xiaoli/Desktop/sp_vision_25-main/install/sp_vision
+[0.133s] -- The C compiler identification is GNU 11.4.0
+[0.236s] -- The CXX compiler identification is GNU 11.4.0
+[0.244s] -- Detecting C compiler ABI info
+[0.319s] -- Detecting C compiler ABI info - done
+[0.325s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.325s] -- Detecting C compile features
+[0.326s] -- Detecting C compile features - done
+[0.328s] -- Detecting CXX compiler ABI info
+[0.407s] -- Detecting CXX compiler ABI info - done
+[0.413s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.413s] -- Detecting CXX compile features
+[0.413s] -- Detecting CXX compile features - done
+[0.414s] -- --------------------CMAKE_BUILD_TYPE: Release--------------------
+[0.420s] -- Found OpenCV: /usr (found version "4.5.4") 
+[0.427s] -- Looking for pthread.h
+[0.502s] -- Looking for pthread.h - found
+[0.502s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.566s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.567s] -- Found Threads: TRUE  
+[0.573s] -- Found nlohmann_json: /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.10.5") 
+[0.688s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.772s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.775s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.781s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.788s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.799s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.828s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.829s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.894s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.912s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.942s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.983s] -- ROS2 environment found, compiling ROS2-related code.
+[0.991s] -- Found required Ceres dependency: Eigen version 3.4.0 in /usr/include/eigen3
+[0.993s] -- Found required Ceres dependency: glog
+[0.994s] -- Found required Ceres dependency: gflags
+[0.994s] -- Found Ceres version: 2.0.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, Multithreading]
+[1.096s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.098s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.101s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.108s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.115s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.137s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.137s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.211s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.252s] -- Configuring done
+[1.421s] -- Generating done
+[1.475s] -- Build files have been written to: /home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision
+[1.488s] Invoked command in '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision' returned '0': /usr/bin/cmake /home/xiaoli/Desktop/sp_vision_25-main -DCMAKE_INSTALL_PREFIX=/home/xiaoli/Desktop/sp_vision_25-main/install/sp_vision
+[1.489s] Invoking command in '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision': /usr/bin/cmake --build /home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision -- -j24 -l24
+[1.535s] [  1%] [32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/admm.cpp.o[0m
+[1.536s] [  2%] [32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/rho_benchmark.cpp.o[0m
+[1.537s] [  3%] [32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/tiny_api.cpp.o[0m
+[1.537s] [  3%] [32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/codegen.cpp.o[0m
+[1.538s] [  4%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/math_tools.cpp.o[0m
+[1.539s] [  5%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/extended_kalman_filter.cpp.o[0m
+[1.540s] [  5%] [32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/impl/unix.cc.o[0m
+[1.540s] [  6%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/exiter.cpp.o[0m
+[1.540s] [  6%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/plotter.cpp.o[0m
+[1.540s] [  7%] [32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/serial.cc.o[0m
+[1.540s] [  9%] [32mBuilding CXX object tasks/omniperception/CMakeFiles/omniperception.dir/decider.cpp.o[0m
+[1.541s] [  9%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/img_tools.cpp.o[0m
+[1.541s] [ 10%] [32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o[0m
+[1.542s] [ 10%] [32mBuilding CXX object tasks/omniperception/CMakeFiles/omniperception.dir/perceptron.cpp.o[0m
+[1.542s] [ 11%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/ransac_sine_fitter.cpp.o[0m
+[1.542s] [ 13%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/recorder.cpp.o[0m
+[1.544s] [ 13%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/trajectory.cpp.o[0m
+[1.544s] [ 14%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/logger.cpp.o[0m
+[1.544s] [ 14%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/pid.cpp.o[0m
+[1.544s] [ 15%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/crc.cpp.o[0m
+[2.223s] [ 15%] [32m[1mLinking CXX static library libserial.a[0m
+[2.247s] [ 15%] Built target serial
+[2.264s] [ 15%] [32mBuilding CXX object io/CMakeFiles/io.dir/hikrobot/hikrobot.cpp.o[0m
+[2.264s] [ 17%] [32mBuilding CXX object io/CMakeFiles/io.dir/camera.cpp.o[0m
+[2.264s] [ 17%] [32mBuilding CXX object io/CMakeFiles/io.dir/cboard.cpp.o[0m
+[2.264s] [ 17%] [32mBuilding CXX object io/CMakeFiles/io.dir/mindvision/mindvision.cpp.o[0m
+[2.264s] [ 19%] [32mBuilding CXX object io/CMakeFiles/io.dir/usbcamera/usbcamera.cpp.o[0m
+[2.264s] [ 19%] [32mBuilding CXX object io/CMakeFiles/io.dir/gimbal/gimbal.cpp.o[0m
+[2.265s] [ 22%] [32mBuilding CXX object io/CMakeFiles/io.dir/ros2/subscribe2nav.cpp.o[0m
+[2.265s] [ 21%] [32mBuilding CXX object io/CMakeFiles/io.dir/dm_imu/dm_imu.cpp.o[0m
+[2.265s] [ 22%] [32mBuilding CXX object io/CMakeFiles/io.dir/ros2/publish2nav.cpp.o[0m
+[2.265s] [ 22%] [32mBuilding CXX object io/CMakeFiles/io.dir/ros2/ros2.cpp.o[0m
+[2.469s] [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:[m[K In function ‘[01m[KtinyVector project_soc(tinyVector, float)[m[K’:
+[2.472s] [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:40:42:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::placeholders::last[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[2.472s]    40 |     tinytype u0 = s(Eigen::placeholders::[01;35m[Klast[m[K) * mu;
+[2.473s]       |                                          [01;35m[K^~~~[m[K
+[2.473s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:265[m[K,
+[2.473s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[2.473s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[2.473s]                  from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/types.hpp:3[m[K,
+[2.473s]                  from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.hpp:3[m[K,
+[2.473s]                  from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:3[m[K:
+[2.473s] [01m[K/usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:180:40:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.473s]   180 |   EIGEN_DEPRECATED static const last_t [01;36m[Klast[m[K = Eigen::last;   // PLEASE use Eigen::last   instead of Eigen::placeholders::last
+[2.473s]       |                                        [01;36m[K^~~~[m[K
+[8.518s] [ 23%] [32m[1mLinking CXX static library libtinympcstatic.a[0m
+[8.543s] [ 23%] Built target tinympcstatic
+[11.366s] [ 24%] [32m[1mLinking CXX static library libomniperception.a[0m
+[11.407s] [ 24%] Built target omniperception
+[13.498s] [ 25%] [32m[1mLinking CXX static library libio.a[0m
+[13.571s] [ 25%] Built target io
+[13.588s] [ 26%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/classifier.cpp.o[0m
+[13.589s] [ 27%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/target.cpp.o[0m
+[13.589s] [ 28%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/aimer.cpp.o[0m
+[13.589s] [ 28%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/armor.cpp.o[0m
+[13.590s] [ 30%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/detector.cpp.o[0m
+[13.590s] [ 30%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/tracker.cpp.o[0m
+[13.590s] [ 28%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov8.cpp.o[0m
+[13.590s] [ 30%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/voter.cpp.o[0m
+[13.590s] [ 30%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/solver.cpp.o[0m
+[13.591s] [ 31%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolo.cpp.o[0m
+[13.591s] [ 32%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/shooter.cpp.o[0m
+[13.592s] [ 33%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/commandgener.cpp.o[0m
+[13.592s] [ 34%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov5.cpp.o[0m
+[13.592s] [ 35%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolo11.cpp.o[0m
+[13.592s] [ 36%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/mt_detector.cpp.o[0m
+[13.592s] [ 36%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/planner/planner.cpp.o[0m
+[17.958s] [ 36%] Built target tools
+[17.980s] [ 38%] [32mBuilding CXX object CMakeFiles/split_video.dir/calibration/split_video.cpp.o[0m
+[17.980s] [ 39%] [32mBuilding CXX object CMakeFiles/calibrate_camera.dir/calibration/calibrate_camera.cpp.o[0m
+[17.981s] [ 41%] [32mBuilding CXX object CMakeFiles/calibrate_robotworld_handeye.dir/calibration/calibrate_robotworld_handeye.cpp.o[0m
+[17.981s] [ 38%] [32mBuilding CXX object CMakeFiles/capture.dir/calibration/capture.cpp.o[0m
+[17.981s] [ 40%] [32mBuilding CXX object CMakeFiles/calibrate_handeye.dir/calibration/calibrate_handeye.cpp.o[0m
+[17.982s] [ 42%] [32mBuilding CXX object CMakeFiles/cboard_test.dir/tests/cboard_test.cpp.o[0m
+[17.983s] [ 43%] [32mBuilding CXX object CMakeFiles/fire_test.dir/tests/fire_test.cpp.o[0m
+[17.983s] [ 44%] [32mBuilding CXX object CMakeFiles/camera_test.dir/tests/camera_test.cpp.o[0m
+[17.986s] [ 46%] [32mBuilding CXX object CMakeFiles/multi_usbcamera_test.dir/tests/multi_usbcamera_test.cpp.o[0m
+[17.987s] [ 46%] [32mBuilding CXX object CMakeFiles/gimbal_response_test.dir/tests/gimbal_response_test.cpp.o[0m
+[18.359s] [ 47%] [32mBuilding CXX object CMakeFiles/usbcamera_test.dir/tests/usbcamera_test.cpp.o[0m
+[18.687s] [ 48%] [32mBuilding CXX object CMakeFiles/dm_test.dir/tests/dm_test.cpp.o[0m

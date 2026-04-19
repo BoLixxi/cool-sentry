@@ -5,7 +5,7 @@
 #include <opencv2/opencv.hpp>
 
 #include "tools/img_tools.hpp"
-
+//calibration/: 相机标定工具。用于计算相机的内参（消除畸变）和手眼标定（对齐相机坐标系与枪管坐标系）
 const std::string keys =
   "{help h usage ? |                          | 输出命令行参数说明}"
   "{config-path c  | configs/calibration.yaml | yaml配置文件路径 }"

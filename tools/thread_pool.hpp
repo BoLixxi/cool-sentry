@@ -10,7 +10,7 @@
 
 #include "tasks/auto_aim/yolo.hpp"
 #include "tools/logger.hpp"
-
+//线程池和有序队列，线程池用于并行处理任务，有序队列用于保证数据的顺序性。
 namespace tools
 {
 struct Frame

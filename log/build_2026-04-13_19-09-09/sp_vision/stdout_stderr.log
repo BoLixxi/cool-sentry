@@ -1,0 +1,127 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- --------------------CMAKE_BUILD_TYPE: Release--------------------
+-- Found OpenCV: /usr (found version "4.5.4") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found nlohmann_json: /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.10.5") 
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- ROS2 environment found, compiling ROS2-related code.
+-- Found required Ceres dependency: Eigen version 3.4.0 in /usr/include/eigen3
+-- Found required Ceres dependency: glog
+-- Found required Ceres dependency: gflags
+-- Found Ceres version: 2.0.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, Multithreading]
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision
+[  1%] [32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/admm.cpp.o[0m
+[  2%] [32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/rho_benchmark.cpp.o[0m
+[  3%] [32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/tiny_api.cpp.o[0m
+[  3%] [32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/codegen.cpp.o[0m
+[  4%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/math_tools.cpp.o[0m
+[  5%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/extended_kalman_filter.cpp.o[0m
+[  5%] [32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/impl/unix.cc.o[0m
+[  6%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/exiter.cpp.o[0m
+[  6%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/plotter.cpp.o[0m
+[  7%] [32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/serial.cc.o[0m
+[  9%] [32mBuilding CXX object tasks/omniperception/CMakeFiles/omniperception.dir/decider.cpp.o[0m
+[  9%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/img_tools.cpp.o[0m
+[ 10%] [32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o[0m
+[ 10%] [32mBuilding CXX object tasks/omniperception/CMakeFiles/omniperception.dir/perceptron.cpp.o[0m
+[ 11%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/ransac_sine_fitter.cpp.o[0m
+[ 13%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/recorder.cpp.o[0m
+[ 13%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/trajectory.cpp.o[0m
+[ 14%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/logger.cpp.o[0m
+[ 14%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/pid.cpp.o[0m
+[ 15%] [32mBuilding CXX object tools/CMakeFiles/tools.dir/crc.cpp.o[0m
+[ 15%] [32m[1mLinking CXX static library libserial.a[0m
+[ 15%] Built target serial
+[ 15%] [32mBuilding CXX object io/CMakeFiles/io.dir/hikrobot/hikrobot.cpp.o[0m
+[ 17%] [32mBuilding CXX object io/CMakeFiles/io.dir/camera.cpp.o[0m
+[ 17%] [32mBuilding CXX object io/CMakeFiles/io.dir/cboard.cpp.o[0m
+[ 17%] [32mBuilding CXX object io/CMakeFiles/io.dir/mindvision/mindvision.cpp.o[0m
+[ 19%] [32mBuilding CXX object io/CMakeFiles/io.dir/usbcamera/usbcamera.cpp.o[0m
+[ 19%] [32mBuilding CXX object io/CMakeFiles/io.dir/gimbal/gimbal.cpp.o[0m
+[ 22%] [32mBuilding CXX object io/CMakeFiles/io.dir/ros2/subscribe2nav.cpp.o[0m
+[ 21%] [32mBuilding CXX object io/CMakeFiles/io.dir/dm_imu/dm_imu.cpp.o[0m
+[ 22%] [32mBuilding CXX object io/CMakeFiles/io.dir/ros2/publish2nav.cpp.o[0m
+[ 22%] [32mBuilding CXX object io/CMakeFiles/io.dir/ros2/ros2.cpp.o[0m
+[01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:[m[K In function ‘[01m[KtinyVector project_soc(tinyVector, float)[m[K’:
+[01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:40:42:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::placeholders::last[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   40 |     tinytype u0 = s(Eigen::placeholders::[01;35m[Klast[m[K) * mu;
+      |                                          [01;35m[K^~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:265[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/types.hpp:3[m[K,
+                 from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.hpp:3[m[K,
+                 from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:180:40:[m[K [01;36m[Knote: [m[Kdeclared here
+  180 |   EIGEN_DEPRECATED static const last_t [01;36m[Klast[m[K = Eigen::last;   // PLEASE use Eigen::last   instead of Eigen::placeholders::last
+      |                                        [01;36m[K^~~~[m[K
+[ 23%] [32m[1mLinking CXX static library libtinympcstatic.a[0m
+[ 23%] Built target tinympcstatic
+[ 24%] [32m[1mLinking CXX static library libomniperception.a[0m
+[ 24%] Built target omniperception
+[ 25%] [32m[1mLinking CXX static library libio.a[0m
+[ 25%] Built target io
+[ 26%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/classifier.cpp.o[0m
+[ 27%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/target.cpp.o[0m
+[ 28%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/aimer.cpp.o[0m
+[ 28%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/armor.cpp.o[0m
+[ 30%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/detector.cpp.o[0m
+[ 30%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/tracker.cpp.o[0m
+[ 28%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov8.cpp.o[0m
+[ 30%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/voter.cpp.o[0m
+[ 30%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/solver.cpp.o[0m
+[ 31%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolo.cpp.o[0m
+[ 32%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/shooter.cpp.o[0m
+[ 33%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/commandgener.cpp.o[0m
+[ 34%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov5.cpp.o[0m
+[ 35%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolo11.cpp.o[0m
+[ 36%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/mt_detector.cpp.o[0m
+[ 36%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/planner/planner.cpp.o[0m
+[ 36%] Built target tools
+[ 38%] [32mBuilding CXX object CMakeFiles/split_video.dir/calibration/split_video.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/calibrate_camera.dir/calibration/calibrate_camera.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/calibrate_robotworld_handeye.dir/calibration/calibrate_robotworld_handeye.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/capture.dir/calibration/capture.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/calibrate_handeye.dir/calibration/calibrate_handeye.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/cboard_test.dir/tests/cboard_test.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/fire_test.dir/tests/fire_test.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/camera_test.dir/tests/camera_test.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/multi_usbcamera_test.dir/tests/multi_usbcamera_test.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/gimbal_response_test.dir/tests/gimbal_response_test.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/usbcamera_test.dir/tests/usbcamera_test.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/dm_test.dir/tests/dm_test.cpp.o[0m

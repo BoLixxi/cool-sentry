@@ -1,0 +1,351 @@
+[0.000000] (-) TimerEvent: {}
+[0.000318] (sp_vision) JobQueued: {'identifier': 'sp_vision', 'dependencies': OrderedDict()}
+[0.000757] (sp_vision) JobStarted: {'identifier': 'sp_vision'}
+[0.008009] (sp_vision) JobProgress: {'identifier': 'sp_vision', 'progress': 'cmake'}
+[0.008212] (sp_vision) Command: {'cmd': ['/usr/bin/cmake', '/home/xiaoli/Desktop/sp_vision_25-main', '-DCMAKE_INSTALL_PREFIX=/home/xiaoli/Desktop/sp_vision_25-main/install/sp_vision'], 'cwd': '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'xiaoli'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/MVS/bin:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/bin:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/home/xiaoli/ros2_ws/install/sp_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/bin:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:'), ('HOME', '/home/xiaoli'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/xiaoli/Desktop/sp_vision_25-main'), ('TERM_PROGRAM_VERSION', '1.112.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1886'), ('SYSTEMD_EXEC_PID', '2167'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3137'), ('COLCON_PREFIX_PATH', '/home/xiaoli/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xiaoli'), ('JOURNAL_STREAM', '8:14542'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xiaoli'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/opt/MVS/bin:/opt/MVS/bin:/opt/MVS/bin:/opt/MVS/bin:/home/xiaoli/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/xiaoli/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/xiaoli/.local/bin:/opt/ros/humble/bin:/opt/MVS/bin:/opt/MVS/bin:/home/xiaoli/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xiaoli-Legion-Y7000P-IRX9:@/tmp/.ICE-unix/2139,unix/xiaoli-Legion-Y7000P-IRX9:/tmp/.ICE-unix/2139'), ('INVOCATION_ID', '036cf153b1484ea2a83164e22e4b395f'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-30d9190c70.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/xiaoli/ros2_ws/install/sp_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xiaoli/ros2_ws/install/sp_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('MVCAM_SDK_VERSION', ''), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('MVS_HOME', '/opt/MVS'), ('CMAKE_PREFIX_PATH', '/home/xiaoli/ros2_ws/install/sp_msgs'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib')]), 'shell': False}
+[0.100118] (-) TimerEvent: {}
+[0.133905] (sp_vision) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.200228] (-) TimerEvent: {}
+[0.236594] (sp_vision) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.244303] (sp_vision) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.300326] (-) TimerEvent: {}
+[0.319546] (sp_vision) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.325231] (sp_vision) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.325592] (sp_vision) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.326174] (sp_vision) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.328717] (sp_vision) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400472] (-) TimerEvent: {}
+[0.407457] (sp_vision) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.413478] (sp_vision) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.413698] (sp_vision) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.414010] (sp_vision) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.414229] (sp_vision) StdoutLine: {'line': b'-- --------------------CMAKE_BUILD_TYPE: Release--------------------\n'}
+[0.420461] (sp_vision) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[0.427349] (sp_vision) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.500591] (-) TimerEvent: {}
+[0.502622] (sp_vision) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.502746] (sp_vision) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.566239] (sp_vision) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.567255] (sp_vision) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.573871] (sp_vision) StdoutLine: {'line': b'-- Found nlohmann_json: /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.10.5") \n'}
+[0.600760] (-) TimerEvent: {}
+[0.688388] (sp_vision) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.700864] (-) TimerEvent: {}
+[0.772818] (sp_vision) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.775962] (sp_vision) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.781263] (sp_vision) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.789096] (sp_vision) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.799424] (sp_vision) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.801125] (-) TimerEvent: {}
+[0.828497] (sp_vision) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.830135] (sp_vision) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.894897] (sp_vision) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.901210] (-) TimerEvent: {}
+[0.912933] (sp_vision) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.942554] (sp_vision) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.983238] (sp_vision) StdoutLine: {'line': b'-- ROS2 environment found, compiling ROS2-related code.\n'}
+[0.991495] (sp_vision) StdoutLine: {'line': b'-- Found required Ceres dependency: Eigen version 3.4.0 in /usr/include/eigen3\n'}
+[0.994143] (sp_vision) StdoutLine: {'line': b'-- Found required Ceres dependency: glog\n'}
+[0.994477] (sp_vision) StdoutLine: {'line': b'-- Found required Ceres dependency: gflags\n'}
+[0.994678] (sp_vision) StdoutLine: {'line': b'-- Found Ceres version: 2.0.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, Multithreading]\n'}
+[1.001331] (-) TimerEvent: {}
+[1.096720] (sp_vision) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.098239] (sp_vision) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.101433] (-) TimerEvent: {}
+[1.102095] (sp_vision) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.108267] (sp_vision) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.115954] (sp_vision) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.137237] (sp_vision) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.138129] (sp_vision) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.201689] (-) TimerEvent: {}
+[1.211807] (sp_vision) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.252278] (sp_vision) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.301906] (-) TimerEvent: {}
+[1.402217] (-) TimerEvent: {}
+[1.421925] (sp_vision) StdoutLine: {'line': b'-- Generating done\n'}
+[1.476148] (sp_vision) StdoutLine: {'line': b'-- Build files have been written to: /home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision\n'}
+[1.488286] (sp_vision) CommandEnded: {'returncode': 0}
+[1.488748] (sp_vision) JobProgress: {'identifier': 'sp_vision', 'progress': 'build'}
+[1.489167] (sp_vision) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision', '--', '-j24', '-l24'], 'cwd': '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'xiaoli'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/MVS/bin:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/bin:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/home/xiaoli/ros2_ws/install/sp_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/bin:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:'), ('HOME', '/home/xiaoli'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/xiaoli/Desktop/sp_vision_25-main'), ('TERM_PROGRAM_VERSION', '1.112.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1886'), ('SYSTEMD_EXEC_PID', '2167'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3137'), ('COLCON_PREFIX_PATH', '/home/xiaoli/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xiaoli'), ('JOURNAL_STREAM', '8:14542'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xiaoli'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/opt/MVS/bin:/opt/MVS/bin:/opt/MVS/bin:/opt/MVS/bin:/home/xiaoli/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/xiaoli/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/xiaoli/.local/bin:/opt/ros/humble/bin:/opt/MVS/bin:/opt/MVS/bin:/home/xiaoli/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xiaoli-Legion-Y7000P-IRX9:@/tmp/.ICE-unix/2139,unix/xiaoli-Legion-Y7000P-IRX9:/tmp/.ICE-unix/2139'), ('INVOCATION_ID', '036cf153b1484ea2a83164e22e4b395f'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-30d9190c70.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/xiaoli/ros2_ws/install/sp_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xiaoli/ros2_ws/install/sp_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('MVCAM_SDK_VERSION', ''), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('MVS_HOME', '/opt/MVS'), ('CMAKE_PREFIX_PATH', '/home/xiaoli/ros2_ws/install/sp_msgs'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib')]), 'shell': False}
+[1.502338] (-) TimerEvent: {}
+[1.535629] (sp_vision) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/admm.cpp.o\x1b[0m\n'}
+[1.536342] (sp_vision) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/rho_benchmark.cpp.o\x1b[0m\n'}
+[1.537671] (sp_vision) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/tiny_api.cpp.o\x1b[0m\n'}
+[1.537913] (sp_vision) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object tasks/auto_aim/planner/tinympc/CMakeFiles/tinympcstatic.dir/codegen.cpp.o\x1b[0m\n'}
+[1.539010] (sp_vision) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/math_tools.cpp.o\x1b[0m\n'}
+[1.539670] (sp_vision) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/extended_kalman_filter.cpp.o\x1b[0m\n'}
+[1.540086] (sp_vision) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/impl/unix.cc.o\x1b[0m\n'}
+[1.540460] (sp_vision) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/exiter.cpp.o\x1b[0m\n'}
+[1.540598] (sp_vision) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/plotter.cpp.o\x1b[0m\n'}
+[1.540709] (sp_vision) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/serial.cc.o\x1b[0m\n'}
+[1.541019] (sp_vision) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object tasks/omniperception/CMakeFiles/omniperception.dir/decider.cpp.o\x1b[0m\n'}
+[1.541431] (sp_vision) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/img_tools.cpp.o\x1b[0m\n'}
+[1.541734] (sp_vision) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object io/serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o\x1b[0m\n'}
+[1.542197] (sp_vision) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object tasks/omniperception/CMakeFiles/omniperception.dir/perceptron.cpp.o\x1b[0m\n'}
+[1.542549] (sp_vision) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/ransac_sine_fitter.cpp.o\x1b[0m\n'}
+[1.542859] (sp_vision) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/recorder.cpp.o\x1b[0m\n'}
+[1.544344] (sp_vision) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/trajectory.cpp.o\x1b[0m\n'}
+[1.544562] (sp_vision) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/logger.cpp.o\x1b[0m\n'}
+[1.544685] (sp_vision) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/pid.cpp.o\x1b[0m\n'}
+[1.544792] (sp_vision) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object tools/CMakeFiles/tools.dir/crc.cpp.o\x1b[0m\n'}
+[1.602442] (-) TimerEvent: {}
+[1.704487] (-) TimerEvent: {}
+[1.804772] (-) TimerEvent: {}
+[1.905065] (-) TimerEvent: {}
+[2.005340] (-) TimerEvent: {}
+[2.105615] (-) TimerEvent: {}
+[2.205893] (-) TimerEvent: {}
+[2.223783] (sp_vision) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking CXX static library libserial.a\x1b[0m\n'}
+[2.248028] (sp_vision) StdoutLine: {'line': b'[ 15%] Built target serial\n'}
+[2.264665] (sp_vision) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/hikrobot/hikrobot.cpp.o\x1b[0m\n'}
+[2.264841] (sp_vision) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/camera.cpp.o\x1b[0m\n'}
+[2.264917] (sp_vision) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/cboard.cpp.o\x1b[0m\n'}
+[2.264977] (sp_vision) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/mindvision/mindvision.cpp.o\x1b[0m\n'}
+[2.265032] (sp_vision) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/usbcamera/usbcamera.cpp.o\x1b[0m\n'}
+[2.265091] (sp_vision) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/gimbal/gimbal.cpp.o\x1b[0m\n'}
+[2.265257] (sp_vision) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/ros2/subscribe2nav.cpp.o\x1b[0m\n'}
+[2.265328] (sp_vision) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/dm_imu/dm_imu.cpp.o\x1b[0m\n'}
+[2.265385] (sp_vision) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/ros2/publish2nav.cpp.o\x1b[0m\n'}
+[2.265437] (sp_vision) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object io/CMakeFiles/io.dir/ros2/ros2.cpp.o\x1b[0m\n'}
+[2.306938] (-) TimerEvent: {}
+[2.407222] (-) TimerEvent: {}
+[2.469861] (sp_vision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[KtinyVector project_soc(tinyVector, float)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.473026] (sp_vision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:40:42:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEigen::placeholders::last\x1b[m\x1b[K\xe2\x80\x99 is deprecated [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations\x07-Wdeprecated-declarations\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.473196] (sp_vision) StderrLine: {'line': b'   40 |     tinytype u0 = s(Eigen::placeholders::\x1b[01;35m\x1b[Klast\x1b[m\x1b[K) * mu;\n'}
+[2.473254] (sp_vision) StderrLine: {'line': b'      |                                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.473306] (sp_vision) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:265\x1b[m\x1b[K,\n'}
+[2.473366] (sp_vision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[2.473414] (sp_vision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[2.473464] (sp_vision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/types.hpp:3\x1b[m\x1b[K,\n'}
+[2.473511] (sp_vision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.hpp:3\x1b[m\x1b[K,\n'}
+[2.473560] (sp_vision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:3\x1b[m\x1b[K:\n'}
+[2.473609] (sp_vision) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:180:40:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[2.473655] (sp_vision) StderrLine: {'line': b'  180 |   EIGEN_DEPRECATED static const last_t \x1b[01;36m\x1b[Klast\x1b[m\x1b[K = Eigen::last;   // PLEASE use Eigen::last   instead of Eigen::placeholders::last\n'}
+[2.473701] (sp_vision) StderrLine: {'line': b'      |                                        \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.507942] (-) TimerEvent: {}
+[2.609943] (-) TimerEvent: {}
+[2.710259] (-) TimerEvent: {}
+[2.810569] (-) TimerEvent: {}
+[2.910864] (-) TimerEvent: {}
+[3.011160] (-) TimerEvent: {}
+[3.111450] (-) TimerEvent: {}
+[3.212047] (-) TimerEvent: {}
+[3.312616] (-) TimerEvent: {}
+[3.412924] (-) TimerEvent: {}
+[3.513600] (-) TimerEvent: {}
+[3.614207] (-) TimerEvent: {}
+[3.714513] (-) TimerEvent: {}
+[3.814791] (-) TimerEvent: {}
+[3.915372] (-) TimerEvent: {}
+[4.015664] (-) TimerEvent: {}
+[4.115991] (-) TimerEvent: {}
+[4.216341] (-) TimerEvent: {}
+[4.316637] (-) TimerEvent: {}
+[4.416949] (-) TimerEvent: {}
+[4.517248] (-) TimerEvent: {}
+[4.617541] (-) TimerEvent: {}
+[4.717829] (-) TimerEvent: {}
+[4.818131] (-) TimerEvent: {}
+[4.918417] (-) TimerEvent: {}
+[5.018712] (-) TimerEvent: {}
+[5.119006] (-) TimerEvent: {}
+[5.219292] (-) TimerEvent: {}
+[5.319579] (-) TimerEvent: {}
+[5.419887] (-) TimerEvent: {}
+[5.520173] (-) TimerEvent: {}
+[5.620455] (-) TimerEvent: {}
+[5.720744] (-) TimerEvent: {}
+[5.821043] (-) TimerEvent: {}
+[5.921336] (-) TimerEvent: {}
+[6.021634] (-) TimerEvent: {}
+[6.121927] (-) TimerEvent: {}
+[6.222204] (-) TimerEvent: {}
+[6.322484] (-) TimerEvent: {}
+[6.422772] (-) TimerEvent: {}
+[6.523067] (-) TimerEvent: {}
+[6.623332] (-) TimerEvent: {}
+[6.723597] (-) TimerEvent: {}
+[6.823862] (-) TimerEvent: {}
+[6.924133] (-) TimerEvent: {}
+[7.024398] (-) TimerEvent: {}
+[7.124688] (-) TimerEvent: {}
+[7.224934] (-) TimerEvent: {}
+[7.325191] (-) TimerEvent: {}
+[7.425454] (-) TimerEvent: {}
+[7.525715] (-) TimerEvent: {}
+[7.625929] (-) TimerEvent: {}
+[7.726223] (-) TimerEvent: {}
+[7.826541] (-) TimerEvent: {}
+[7.926799] (-) TimerEvent: {}
+[8.027054] (-) TimerEvent: {}
+[8.127313] (-) TimerEvent: {}
+[8.227582] (-) TimerEvent: {}
+[8.327840] (-) TimerEvent: {}
+[8.428099] (-) TimerEvent: {}
+[8.518354] (sp_vision) StdoutLine: {'line': b'[ 23%] \x1b[32m\x1b[1mLinking CXX static library libtinympcstatic.a\x1b[0m\n'}
+[8.528206] (-) TimerEvent: {}
+[8.544017] (sp_vision) StdoutLine: {'line': b'[ 23%] Built target tinympcstatic\n'}
+[8.628311] (-) TimerEvent: {}
+[8.728593] (-) TimerEvent: {}
+[8.828873] (-) TimerEvent: {}
+[8.929139] (-) TimerEvent: {}
+[9.029412] (-) TimerEvent: {}
+[9.129668] (-) TimerEvent: {}
+[9.229933] (-) TimerEvent: {}
+[9.330189] (-) TimerEvent: {}
+[9.430442] (-) TimerEvent: {}
+[9.530692] (-) TimerEvent: {}
+[9.630943] (-) TimerEvent: {}
+[9.731224] (-) TimerEvent: {}
+[9.831505] (-) TimerEvent: {}
+[9.931767] (-) TimerEvent: {}
+[10.032033] (-) TimerEvent: {}
+[10.132292] (-) TimerEvent: {}
+[10.232560] (-) TimerEvent: {}
+[10.332816] (-) TimerEvent: {}
+[10.433078] (-) TimerEvent: {}
+[10.533331] (-) TimerEvent: {}
+[10.633587] (-) TimerEvent: {}
+[10.733839] (-) TimerEvent: {}
+[10.834094] (-) TimerEvent: {}
+[10.934356] (-) TimerEvent: {}
+[11.034603] (-) TimerEvent: {}
+[11.134840] (-) TimerEvent: {}
+[11.235063] (-) TimerEvent: {}
+[11.335282] (-) TimerEvent: {}
+[11.366992] (sp_vision) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking CXX static library libomniperception.a\x1b[0m\n'}
+[11.407707] (sp_vision) StdoutLine: {'line': b'[ 24%] Built target omniperception\n'}
+[11.435401] (-) TimerEvent: {}
+[11.535714] (-) TimerEvent: {}
+[11.635922] (-) TimerEvent: {}
+[11.736181] (-) TimerEvent: {}
+[11.836485] (-) TimerEvent: {}
+[11.936788] (-) TimerEvent: {}
+[12.037104] (-) TimerEvent: {}
+[12.137403] (-) TimerEvent: {}
+[12.237704] (-) TimerEvent: {}
+[12.338012] (-) TimerEvent: {}
+[12.438266] (-) TimerEvent: {}
+[12.538484] (-) TimerEvent: {}
+[12.638769] (-) TimerEvent: {}
+[12.738991] (-) TimerEvent: {}
+[12.839221] (-) TimerEvent: {}
+[12.939465] (-) TimerEvent: {}
+[13.039778] (-) TimerEvent: {}
+[13.140022] (-) TimerEvent: {}
+[13.240339] (-) TimerEvent: {}
+[13.340639] (-) TimerEvent: {}
+[13.440951] (-) TimerEvent: {}
+[13.499132] (sp_vision) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking CXX static library libio.a\x1b[0m\n'}
+[13.541156] (-) TimerEvent: {}
+[13.571410] (sp_vision) StdoutLine: {'line': b'[ 25%] Built target io\n'}
+[13.588819] (sp_vision) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/classifier.cpp.o\x1b[0m\n'}
+[13.589506] (sp_vision) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/target.cpp.o\x1b[0m\n'}
+[13.589638] (sp_vision) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/aimer.cpp.o\x1b[0m\n'}
+[13.590011] (sp_vision) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/armor.cpp.o\x1b[0m\n'}
+[13.590414] (sp_vision) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/detector.cpp.o\x1b[0m\n'}
+[13.590474] (sp_vision) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/tracker.cpp.o\x1b[0m\n'}
+[13.590518] (sp_vision) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov8.cpp.o\x1b[0m\n'}
+[13.590563] (sp_vision) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/voter.cpp.o\x1b[0m\n'}
+[13.590639] (sp_vision) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/solver.cpp.o\x1b[0m\n'}
+[13.591203] (sp_vision) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolo.cpp.o\x1b[0m\n'}
+[13.591960] (sp_vision) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/shooter.cpp.o\x1b[0m\n'}
+[13.592321] (sp_vision) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/commandgener.cpp.o\x1b[0m\n'}
+[13.592445] (sp_vision) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov5.cpp.o\x1b[0m\n'}
+[13.592522] (sp_vision) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolo11.cpp.o\x1b[0m\n'}
+[13.592681] (sp_vision) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/mt_detector.cpp.o\x1b[0m\n'}
+[13.592816] (sp_vision) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/planner/planner.cpp.o\x1b[0m\n'}
+[13.641258] (-) TimerEvent: {}
+[13.741540] (-) TimerEvent: {}
+[13.841882] (-) TimerEvent: {}
+[13.942185] (-) TimerEvent: {}
+[14.042458] (-) TimerEvent: {}
+[14.142742] (-) TimerEvent: {}
+[14.243027] (-) TimerEvent: {}
+[14.343299] (-) TimerEvent: {}
+[14.443581] (-) TimerEvent: {}
+[14.543861] (-) TimerEvent: {}
+[14.644134] (-) TimerEvent: {}
+[14.744416] (-) TimerEvent: {}
+[14.844718] (-) TimerEvent: {}
+[14.945012] (-) TimerEvent: {}
+[15.045294] (-) TimerEvent: {}
+[15.145581] (-) TimerEvent: {}
+[15.245846] (-) TimerEvent: {}
+[15.346123] (-) TimerEvent: {}
+[15.446408] (-) TimerEvent: {}
+[15.546693] (-) TimerEvent: {}
+[15.646947] (-) TimerEvent: {}
+[15.747241] (-) TimerEvent: {}
+[15.847520] (-) TimerEvent: {}
+[15.947809] (-) TimerEvent: {}
+[16.048110] (-) TimerEvent: {}
+[16.148393] (-) TimerEvent: {}
+[16.248672] (-) TimerEvent: {}
+[16.348943] (-) TimerEvent: {}
+[16.449224] (-) TimerEvent: {}
+[16.549516] (-) TimerEvent: {}
+[16.649797] (-) TimerEvent: {}
+[16.750089] (-) TimerEvent: {}
+[16.850419] (-) TimerEvent: {}
+[16.950727] (-) TimerEvent: {}
+[17.051073] (-) TimerEvent: {}
+[17.151383] (-) TimerEvent: {}
+[17.251710] (-) TimerEvent: {}
+[17.352039] (-) TimerEvent: {}
+[17.452328] (-) TimerEvent: {}
+[17.552612] (-) TimerEvent: {}
+[17.652891] (-) TimerEvent: {}
+[17.753157] (-) TimerEvent: {}
+[17.853434] (-) TimerEvent: {}
+[17.953689] (-) TimerEvent: {}
+[17.959070] (sp_vision) StdoutLine: {'line': b'[ 36%] Built target tools\n'}
+[17.981006] (sp_vision) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/split_video.dir/calibration/split_video.cpp.o\x1b[0m\n'}
+[17.981188] (sp_vision) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/calibrate_camera.dir/calibration/calibrate_camera.cpp.o\x1b[0m\n'}
+[17.981251] (sp_vision) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/calibrate_robotworld_handeye.dir/calibration/calibrate_robotworld_handeye.cpp.o\x1b[0m\n'}
+[17.981311] (sp_vision) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/capture.dir/calibration/capture.cpp.o\x1b[0m\n'}
+[17.981396] (sp_vision) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/calibrate_handeye.dir/calibration/calibrate_handeye.cpp.o\x1b[0m\n'}
+[17.982725] (sp_vision) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/cboard_test.dir/tests/cboard_test.cpp.o\x1b[0m\n'}
+[17.983971] (sp_vision) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/fire_test.dir/tests/fire_test.cpp.o\x1b[0m\n'}
+[17.984128] (sp_vision) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/camera_test.dir/tests/camera_test.cpp.o\x1b[0m\n'}
+[17.987050] (sp_vision) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/multi_usbcamera_test.dir/tests/multi_usbcamera_test.cpp.o\x1b[0m\n'}
+[17.987258] (sp_vision) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/gimbal_response_test.dir/tests/gimbal_response_test.cpp.o\x1b[0m\n'}
+[18.053795] (-) TimerEvent: {}
+[18.155059] (-) TimerEvent: {}
+[18.258957] (-) TimerEvent: {}
+[18.359305] (-) TimerEvent: {}
+[18.359742] (sp_vision) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/usbcamera_test.dir/tests/usbcamera_test.cpp.o\x1b[0m\n'}
+[18.459419] (-) TimerEvent: {}
+[18.559756] (-) TimerEvent: {}
+[18.660104] (-) TimerEvent: {}
+[18.687494] (sp_vision) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/dm_test.dir/tests/dm_test.cpp.o\x1b[0m\n'}
+[18.760213] (-) TimerEvent: {}
+[18.860532] (-) TimerEvent: {}
+[18.960840] (-) TimerEvent: {}
+[19.062951] (-) TimerEvent: {}
+[19.163617] (-) TimerEvent: {}
+[19.265109] (-) TimerEvent: {}
+[19.365810] (-) TimerEvent: {}
+[19.466468] (-) TimerEvent: {}
+[19.566782] (-) TimerEvent: {}
+[19.667101] (-) TimerEvent: {}
+[19.767413] (-) TimerEvent: {}
+[19.867954] (-) TimerEvent: {}
+[19.970952] (-) TimerEvent: {}
+[20.071286] (-) TimerEvent: {}
+[20.171623] (-) TimerEvent: {}
+[20.271957] (-) TimerEvent: {}
+[20.372287] (-) TimerEvent: {}
+[20.472955] (-) TimerEvent: {}
+[20.573604] (-) TimerEvent: {}
+[20.673937] (-) TimerEvent: {}
+[20.774584] (-) TimerEvent: {}
+[20.875282] (-) TimerEvent: {}
+[20.978265] (-) TimerEvent: {}
+[21.078575] (-) TimerEvent: {}
+[21.178957] (-) TimerEvent: {}
+[21.280299] (-) TimerEvent: {}
+[21.380611] (-) TimerEvent: {}
+[21.480933] (-) TimerEvent: {}
+[21.582254] (-) TimerEvent: {}
+[21.822979] (-) TimerEvent: {}

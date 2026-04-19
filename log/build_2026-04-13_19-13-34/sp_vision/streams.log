@@ -1,0 +1,45 @@
+[0.009s] Invoking command in '/home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision': /usr/bin/cmake --build /home/xiaoli/Desktop/sp_vision_25-main/build/sp_vision -- -j24 -l24
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target tinympcstatic[0m
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target omniperception[0m
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target tools[0m
+[0.057s] [  3%] Built target serial
+[0.062s] [  7%] Built target tinympcstatic
+[0.063s] [  9%] Built target omniperception
+[0.069s] [ 17%] Built target tools
+[0.069s] [35m[1mConsolidate compiler generated dependencies of target io[0m
+[0.083s] [ 18%] [32mBuilding CXX object CMakeFiles/calibrate_handeye.dir/calibration/calibrate_handeye.cpp.o[0m
+[0.084s] [ 19%] [32mBuilding CXX object CMakeFiles/split_video.dir/calibration/split_video.cpp.o[0m
+[0.084s] [ 20%] [32mBuilding CXX object CMakeFiles/calibrate_camera.dir/calibration/calibrate_camera.cpp.o[0m
+[0.085s] [ 21%] [32mBuilding CXX object CMakeFiles/calibrate_robotworld_handeye.dir/calibration/calibrate_robotworld_handeye.cpp.o[0m
+[0.094s] [ 29%] Built target io
+[0.104s] [35m[1mConsolidate compiler generated dependencies of target auto_aim[0m
+[0.109s] [ 32%] [32mBuilding CXX object CMakeFiles/topic_loop_test.dir/tests/topic_loop_test.cpp.o[0m
+[0.109s] [ 32%] [32mBuilding CXX object CMakeFiles/cboard_test.dir/tests/cboard_test.cpp.o[0m
+[0.109s] [ 32%] [32mBuilding CXX object CMakeFiles/multi_usbcamera_test.dir/tests/multi_usbcamera_test.cpp.o[0m
+[0.110s] [ 33%] [32mBuilding CXX object CMakeFiles/fire_test.dir/tests/fire_test.cpp.o[0m
+[0.110s] [ 34%] [32mBuilding CXX object CMakeFiles/capture.dir/calibration/capture.cpp.o[0m
+[0.111s] [ 35%] [32mBuilding CXX object CMakeFiles/dm_test.dir/tests/dm_test.cpp.o[0m
+[0.112s] [ 37%] [32mBuilding CXX object CMakeFiles/usbcamera_test.dir/tests/usbcamera_test.cpp.o[0m
+[0.112s] [ 37%] [32mBuilding CXX object CMakeFiles/camera_test.dir/tests/camera_test.cpp.o[0m
+[0.112s] [ 38%] [32mBuilding CXX object CMakeFiles/subscribe_test.dir/tests/subscribe_test.cpp.o[0m
+[0.112s] [ 39%] [32mBuilding CXX object CMakeFiles/gimbal_response_test.dir/tests/gimbal_response_test.cpp.o[0m
+[0.123s] [ 41%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/solver.cpp.o[0m
+[0.123s] [ 42%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov5.cpp.o[0m
+[0.124s] [ 43%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/detector.cpp.o[0m
+[0.124s] [ 43%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/tracker.cpp.o[0m
+[0.126s] [ 44%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolov8.cpp.o[0m
+[0.126s] [ 45%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/shooter.cpp.o[0m
+[0.126s] [ 44%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/target.cpp.o[0m
+[0.126s] [ 46%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/yolos/yolo11.cpp.o[0m
+[0.126s] [ 46%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/aimer.cpp.o[0m
+[0.131s] [ 47%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/commandgener.cpp.o[0m
+[4.983s] [ 47%] [32m[1mLinking CXX executable calibrate_camera[0m
+[5.862s] [ 48%] [32m[1mLinking CXX executable calibrate_handeye[0m
+[5.940s] [ 48%] [32m[1mLinking CXX executable calibrate_robotworld_handeye[0m
+[6.544s] [ 48%] Built target calibrate_camera
+[6.555s] [ 48%] Built target calibrate_handeye
+[6.564s] [ 48%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/planner/planner.cpp.o[0m
+[6.570s] [ 48%] Built target calibrate_robotworld_handeye
+[6.594s] [ 49%] [32mBuilding CXX object tasks/auto_aim/CMakeFiles/auto_aim.dir/multithread/mt_detector.cpp.o[0m
+[7.707s] [ 50%] [32m[1mLinking CXX executable dm_test[0m

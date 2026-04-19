@@ -1,0 +1,13 @@
+[01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:[m[K In function ‘[01m[KtinyVector project_soc(tinyVector, float)[m[K’:
+[01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:40:42:[m[K [01;35m[Kwarning: [m[K‘[01m[KEigen::placeholders::last[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   40 |     tinytype u0 = s(Eigen::placeholders::[01;35m[Klast[m[K) * mu;
+      |                                          [01;35m[K^~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:265[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/types.hpp:3[m[K,
+                 from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.hpp:3[m[K,
+                 from [01m[K/home/xiaoli/Desktop/sp_vision_25-main/tasks/auto_aim/planner/tinympc/admm.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:180:40:[m[K [01;36m[Knote: [m[Kdeclared here
+  180 |   EIGEN_DEPRECATED static const last_t [01;36m[Klast[m[K = Eigen::last;   // PLEASE use Eigen::last   instead of Eigen::placeholders::last
+      |                                        [01;36m[K^~~~[m[K

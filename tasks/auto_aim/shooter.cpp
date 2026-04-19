@@ -4,7 +4,7 @@
 
 #include "tools/logger.hpp"
 #include "tools/math_tools.hpp"
-
+//planner / aimer / shooter: 负责根据目标的运动轨迹，预测未来的位置，并决定云台该如何转动，以及何时触发发射。
 namespace auto_aim
 {
 Shooter::Shooter(const std::string & config_path) : last_command_{false, false, 0, 0}

@@ -4,7 +4,7 @@
 #include <yaml-cpp/yaml.h>
 
 #include "tools/logger.hpp"
-
+//读取配置文件
 namespace tools
 {
 inline YAML::Node load(const std::string & path)

@@ -5,7 +5,7 @@
 #include "tools/math_tools.hpp"
 #include "tools/trajectory.hpp"
 #include "tools/yaml.hpp"
-
+//planner / aimer / shooter: 负责根据目标的运动轨迹，预测未来的位置，并决定云台该如何转动，以及何时触发发射。
 using namespace std::chrono_literals;
 
 namespace auto_aim

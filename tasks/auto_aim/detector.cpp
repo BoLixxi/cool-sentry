@@ -7,7 +7,7 @@
 
 #include "tools/img_tools.hpp"
 #include "tools/logger.hpp"
-
+//检测器: 负责从图片中找出装甲板的位置
 namespace auto_aim
 {
 Detector::Detector(const std::string & config_path, bool debug)

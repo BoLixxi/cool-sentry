@@ -6,7 +6,7 @@
 
 #include "tools/logger.hpp"
 #include "tools/math_tools.hpp"
-
+//(追踪器): 负责记住目标，处理目标的短暂丢失。
 namespace auto_aim
 {
 Tracker::Tracker(const std::string & config_path, Solver & solver)

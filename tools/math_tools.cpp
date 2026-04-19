@@ -2,7 +2,7 @@
 
 #include <cmath>
 #include <opencv2/core.hpp>  // CV_PI
-
+//包含四元数、欧拉角转换、Eigen 矩阵运算等
 namespace tools
 {
 double limit_rad(double angle)
