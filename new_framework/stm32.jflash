@@ -1,9 +1,9 @@
-  AppVersion = 72202
+  AppVersion = 93800
   FileVersion = 2
 [GENERAL]
-  aATEModuleSel[10] = 0,0,0,0,0,0,0,0,0,0
+  aATEModuleSel[24] = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
   ConnectMode = 0
-  CurrentFile = ""
+  CurrentFile = "D:\autoshot_rm\cool-sentry\new_framework\build\basic_framework.hex"
   DataFileSAddr = 0x00000000
   GUIMode = 0
   HostName = ""
@@ -31,7 +31,6 @@
   NumExitSteps = 0
   UseScriptFile = 0
   ScriptFile = ""
-  UseRAM = 1
   RAMAddr = 0x20000000
   RAMSize = 0x00020000
   CheckCoreID = 1
@@ -42,18 +41,23 @@
   EndianMode = 0
   ChipName = "ST STM32F407IG"
 [FLASH]
+  NumBanks = 2
+[FLASH0]
   aRangeSel[1] = 0-11
   BankName = "Internal flash"
   BankSelMode = 1
   BaseAddr = 0x08000000
-  NumBanks = 1
+[FLASH1]
+  aRangeSel[1] = 0-16
+  BankName = "OTP memory"
+  BankSelMode = 1
+  BaseAddr = 0x1FFF7800
 [PRODUCTION]
   AutoPerformsDisconnect = 0
   AutoPerformsErase = 1
   AutoPerformsProgram = 1
   AutoPerformsSecure = 0
   AutoPerformsStartApp = 0
-  AutoPerformsUnsecure = 0
   AutoPerformsVerify = 1
   EnableFixedVTref = 0
   EnableTargetPower = 0

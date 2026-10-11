@@ -9,6 +9,9 @@ build_*/
 build_clean/
 install/
 log/
+!new_framework/bsp/log/
+!new_framework/bsp/log/bsp_log.c
+!new_framework/bsp/log/bsp_log.h
 Camera/
 logs/
 assets/img_with_q/

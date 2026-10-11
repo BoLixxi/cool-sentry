@@ -352,6 +352,6 @@ clean:
 download_dap:
 	openocd -f openocd_dap.cfg -c init -c halt -c "flash write_image erase $(BUILD_DIR)/$(TARGET).bin 0x08000000" -c reset -c shutdown
 download_jlink:
-	JFlash -openprj'stm32.jflash' -open'$(BUILD_DIR)/$(TARGET).hex',0x8000000 -auto -startapp -exit
+	"D:/ozone+jlink/JLink_V938/JFlash.exe" -openprj"stm32.jflash" -open"build/basic_framework.hex",0x08000000 -auto -startapp -exit
 
 # *** EOF ***
