@@ -1,0 +1,1 @@
+#define VISION_USE_UART

@@ -71,52 +71,9 @@ R_camera2gimbal: [-0.0083195760046954614, 0.010498791137270739, 0.99991027599468
 t_camera2gimbal: [0.094969301833534511, 0.095006290298006682, 0.050987066291756609]
 
 #####-----cboard参数-----#####
-quaternion_canid: 0x100
-bullet_speed_canid: 0x101
-send_canid: 0xff
-can_interface: "/dev/rm_serial"
+serial_port: "/dev/rm_serial"
 baudrate: 115200
-
-#####-----gimbal参数-----#####
-com_port: "/dev/gimbal"
-
-#####-----planner-----#####
-fire_thresh: 0.003
-
-max_yaw_acc: 50
-Q_yaw: [9e6, 0]
-R_yaw: [1]
-
-max_pitch_acc: 100
-Q_pitch: [9e6,0]
-R_pitch: [1]
-
-#####-----buff_detector参数-----#####
-detect:
-  contrast: 1
-  brightness: 
-    blue: -120
-    red: -100
-  brightness_threshold:
-    blue: 120
-    red: 40
-  morphology_size:
-    blue: 3
-    red: 3
-  dilate_size: 2
-  # canny_low_threshold: 100
-  # canny_high_threshold: 180
-  # approx_epsilon: 1.0
-  R_contours_min_area: 200
-  R_contours_max_area: 600
-  fanblades_head_contours_min_area: 3000
-  fanblades_head_contours_max_area: 8000
-  fanblades_body_contours_min_area: 1000
-  fanblades_body_contours_max_area: 4000
-  standard_fanblade_path: ./assets/standard_fanblade.jpg
-
-#####-----buff_aimer参数-----#####
-aim_time: 0.150         # s
-wait_time: 0.300        # s
-command_fire_gap: 0.080 # s
-predict_time: 0.150     # s
+bullet_speed: 23.0
+serial_timeout_ms: 1000
+max_imu_age_ms: 100
+receive_frame_size: 19

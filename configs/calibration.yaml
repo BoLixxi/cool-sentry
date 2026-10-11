@@ -10,8 +10,8 @@ gain: 10.0
 vid_pid: "2bdf:0001"
 
 #####-----cboard参数-----#####
-quaternion_canid: 0x01
-bullet_speed_canid: 0x110
-send_canid: 0xff
-can_interface: "/dev/rm_serial"
+serial_port: "/dev/rm_serial"
 baudrate: 115200
+serial_timeout_ms: 1000
+max_imu_age_ms: 100
+receive_frame_size: 19

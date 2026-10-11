@@ -1,0 +1,138 @@
+--- a/Application/ins_task.c
++++ b/Application/ins_task.c
+@@ -16,6 +16,8 @@
+ #include "bsp_PWM.h"
+ #include "can.h"
+ #include "usart.h"
++#include <math.h>
++#include <string.h>
+ INS_t INS;
+ IMU_Param_t IMU_Param;
+ PID_t TempCtrl = {0};
+@@ -40,6 +42,7 @@
+ uint8_t tx_buffer[19];
+ uint8_t rx_buffer[20];
+ uint8_t rx_index = 0;
++volatile VisionCommand_t vision_command = {0};
+ static void IMU_Param_Correction(IMU_Param_t *param, float gyro[3], float accel[3]);
+ 
+ void INS_Init(void)
+@@ -92,7 +95,7 @@
+     for (int i = 0; i < 18; i++) checksum += tx_buffer[i];
+     tx_buffer[18] = checksum;
+     
+-		my_printf(&huart1, "%.*s", 19, tx_buffer);  // 阻塞发送，可根据需要改为中断/DMA
++    HAL_UART_Transmit(&huart1, tx_buffer, sizeof(tx_buffer), 5);
+ }
+ 
+ /**
+@@ -101,20 +104,25 @@
+  */
+ void Gimbal_ParseCommand(uint8_t* data)
+ {
+-    if (data[0] != 0xAA || data[1] != 0x55) return;
++    if (data[0] != 0xAA || data[1] != 0x55 || data[2] != 0x01) return;
+     
+     uint8_t checksum = 0;
+     for (int i = 2; i < 15; i++) checksum += data[i];
+     if (checksum != data[15]) return;
+     
+-    uint16_t control = (uint16_t)(data[3] << 8 | data[2]);
+-    uint16_t shoot   = (uint16_t)(data[5] << 8 | data[4]);
+-    float yaw   = *(float*)&data[6];
+-    float pitch = *(float*)&data[10];
+-    
+-    // 在此处控制云台电机
+-    // 例如：SetGimbalAngle(yaw, pitch);  SetShoot(shoot);
+-    // 可根据你的云台控制接口调用相应函数
++    uint16_t control = (uint16_t)(data[4] << 8 | data[3]);
++    uint16_t shoot   = (uint16_t)(data[6] << 8 | data[5]);
++    float yaw, pitch;
++    memcpy(&yaw, &data[7], sizeof(yaw));
++    memcpy(&pitch, &data[11], sizeof(pitch));
++    if (control > 1 || shoot > 1 || !isfinite(yaw) || !isfinite(pitch)) return;
++    vision_command.control = control;
++    vision_command.shoot = control ? shoot : 0;
++    vision_command.yaw_rad = yaw;
++    vision_command.pitch_rad = pitch;
++    vision_command.received_ms = HAL_GetTick();
++    
++    // Control tasks must take a coherent snapshot and enforce enable/timeout conditions.
+ }
+ 
+ 
+--- a/Application/ins_task.h
++++ b/Application/ins_task.h
+@@ -79,6 +79,14 @@
+ void EarthFrameToBodyFrame(const float *vecEF, float *vecBF, float *q);
+ void IMU_SendData(void);
+ void Gimbal_ParseCommand(uint8_t* data);
++typedef struct {
++    uint16_t control;
++    uint16_t shoot;
++    float yaw_rad;
++    float pitch_rad;
++    uint32_t received_ms;
++} VisionCommand_t;
++extern volatile VisionCommand_t vision_command;
+ 
+ void CAN_Init(CAN_HandleTypeDef *hcan);
+ int16_t Yaw_Gimbal_Task2(float realangle ,float targetangle);
+--- a/Src/usart.c
++++ b/Src/usart.c
+@@ -23,6 +23,9 @@
+ /* USER CODE BEGIN 0 */
+ #include "stdio.h"
+ #include "mydefine.h"
++#include "ins_task.h"
++#include <string.h>
++static uint8_t vision_rx_byte;
+ 
+ /* USER CODE END 0 */
+ 
+@@ -48,6 +51,8 @@
+   {
+     Error_Handler();
+   }
++  rx_index = 0;
++  HAL_UART_Receive_IT(&huart1, &vision_rx_byte, 1);
+ 
+ }
+ /* USART3 init function */
+@@ -285,12 +290,31 @@
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+ {
+     if (huart->Instance == USART1) {
+-        rx_index++;
+-        if (rx_index >= 16) {
+-            Gimbal_ParseCommand(rx_buffer);
+-            rx_index = 0;
++        rx_buffer[rx_index++] = vision_rx_byte;
++        while (rx_index >= 2) {
++            if (rx_buffer[0] != 0xAA || rx_buffer[1] != 0x55) {
++                memmove(rx_buffer, rx_buffer + 1, --rx_index);
++                continue;
++            }
++            if (rx_index < 16) break;
++            uint8_t checksum = 0;
++            for (int i = 2; i < 15; ++i) checksum += rx_buffer[i];
++            if (rx_buffer[2] == 0x01 && checksum == rx_buffer[15]) {
++                Gimbal_ParseCommand(rx_buffer);
++                rx_index = 0;
++                break;
++            }
++            memmove(rx_buffer, rx_buffer + 1, --rx_index);
+         }
+-        HAL_UART_Receive_IT(huart, &rx_buffer[rx_index], 1);
++        HAL_UART_Receive_IT(huart, &vision_rx_byte, 1);
++    }
++}
++void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
++{
++    if (huart->Instance == USART1) {
++        rx_index = 0;
++        HAL_UART_AbortReceive(huart);
++        HAL_UART_Receive_IT(huart, &vision_rx_byte, 1);
+     }
+ }
+ /* USER CODE END 1 */

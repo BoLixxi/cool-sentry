@@ -1,207 +1,207 @@
 #include "cboard.hpp"
 
-#include <thread>
-#include <atomic>
-#include <serial/serial.h>
+#include <algorithm>
+#include <array>
+#include <cmath>
+#include <cstring>
+#include <stdexcept>
+#include <vector>
 
-#include "tools/math_tools.hpp"
+#include "tools/logger.hpp"
 #include "tools/yaml.hpp"
+#include "new_framework/modules/master_machine/vision_wire.h"
 
 namespace io
 {
-
-// 全局串口变量
-static serial::Serial* g_serial = nullptr;
-static std::thread g_recv_thread;
-static std::atomic<bool> g_running{false};
-
-// 接收线程函数
-// 接收线程函数
-static void receiveLoop(tools::ThreadSafeQueue<CBoard::IMUData>* queue)
-{
-    uint8_t buffer[1024];
-    size_t buffer_len = 0; // 静态缓存区，用于拼接碎片数据
-    
-    while (g_running && g_serial && g_serial->isOpen()) {
-        size_t available = g_serial->available();
-        if (available > 0) {
-            // 防止溢出保护
-            if (buffer_len + available > 1024) {
-                buffer_len = 0; // 如果数据积压严重，清空重来
-            }
-            
-            // 将新读到的碎片数据拼接到 buffer 后面
-            size_t n = g_serial->read(buffer + buffer_len, available);
-            buffer_len += n;
-            auto timestamp = std::chrono::steady_clock::now();
-            
-            size_t i = 0;
-            // 你的完整一帧数据是 19 字节 (55 aa + 16字节四元数 + 1字节尾)
-            while (i + 19 <= buffer_len) {
-                if (buffer[i] == 0x55 && buffer[i+1] == 0xAA) {
-                    // 找到帧头，提取 16 字节的 payload
-                    const uint8_t* payload = buffer + i + 2;
-                    float x = *(float*)(payload);
-                    float y = *(float*)(payload + 4);
-                    float z = *(float*)(payload + 8);
-                    float w = *(float*)(payload + 12);
-                    
-                    Eigen::Quaterniond q(w, x, y, z);
-                    q.normalize();
-                    
-                    queue->push({q, timestamp}); // 推送给主线程
-                    
-                    i += 19; // 成功解析一帧，指针向后跳 19 个字节
-                } else {
-                    i++; // 不是帧头，向后移 1 字节继续寻找
-                }
-            }
-            
-            // 将没有凑够一帧的残缺数据移到 buffer 头部，等待下次循环拼接
-            if (i < buffer_len) {
-                std::memmove(buffer, buffer + i, buffer_len - i);
-                buffer_len -= i;
-            } else {
-                buffer_len = 0; // 正好处理完
-            }
-        } else {
-            // 没有数据时稍微休眠，防止CPU占用100%
-            std::this_thread::sleep_for(std::chrono::milliseconds(1));
-        }
-    }
-}
-
 CBoard::CBoard(const std::string & config_path)
-: mode(Mode::idle),
-  shoot_mode(ShootMode::left_shoot),
-  bullet_speed(0),
-  queue_(5000)
 {
-    auto yaml = tools::load(config_path);
-    
-    quaternion_canid_ = tools::read<int>(yaml, "quaternion_canid");
-    bullet_speed_canid_ = tools::read<int>(yaml, "bullet_speed_canid");
-    send_canid_ = tools::read<int>(yaml, "send_canid");
-    
-    std::string serial_port;
-    int baudrate = 115200;
-    
-    if (!yaml["can_interface"]) {
-        throw std::runtime_error("Missing 'can_interface' in YAML configuration.");
-    }
-    serial_port = yaml["can_interface"].as<std::string>();
-    if (yaml["baudrate"]) {
-        baudrate = yaml["baudrate"].as<int>();
-    }
-    
-    // 初始化串口
-    g_serial = new serial::Serial(serial_port, baudrate);
-    g_serial->setBytesize(serial::eightbits);
-    g_serial->setParity(serial::parity_none);
-    g_serial->setStopbits(serial::stopbits_one);
-    g_serial->setFlowcontrol(serial::flowcontrol_none);
-    
-    serial::Timeout timeout = serial::Timeout::simpleTimeout(100);
-    g_serial->setTimeout(timeout);
-    
-    if (!g_serial->isOpen()) {
-        try {
-            g_serial->open();
-        } catch (const std::exception& e) {
-            tools::logger()->error("Failed to open serial port: {}", e.what());
-        }
-    }
-    
-    if (g_serial->isOpen()) {
-        tools::logger()->info("[Cboard] Serial port opened on {}", serial_port);
-        g_running = true;
-        g_recv_thread = std::thread(receiveLoop, &queue_);
-    } else {
-        tools::logger()->error("[Cboard] Failed to open serial port!");
-    }
-    
-    tools::logger()->info("[Cboard] Waiting for data...");
-    queue_.pop(data_ahead_);
-    queue_.pop(data_behind_);
-    tools::logger()->info("[Cboard] Opened.");
+  const auto yaml = tools::load(config_path);
+  const auto port = yaml["serial_port"] ? yaml["serial_port"].as<std::string>()
+                                        : tools::read<std::string>(yaml, "can_interface");
+  const auto baudrate = yaml["baudrate"].as<unsigned int>(115200);
+  bullet_speed = yaml["bullet_speed"].as<double>(23.0);
+  if (!std::isfinite(bullet_speed) || bullet_speed <= 0)
+    throw std::runtime_error("bullet_speed must be positive (m/s)");
+  timeout_ = std::chrono::milliseconds(yaml["serial_timeout_ms"].as<int>(1000));
+  if (timeout_.count() <= 0) throw std::runtime_error("serial_timeout_ms must be positive");
+  max_imu_age_ = std::chrono::milliseconds(yaml["max_imu_age_ms"].as<int>(100));
+  if (max_imu_age_.count() <= 0) throw std::runtime_error("max_imu_age_ms must be positive");
+  const auto protocol = yaml["serial_protocol"].as<std::string>("legacy19");
+  seasky_ = protocol == "seasky_v1";
+  if (!seasky_ && protocol != "legacy19")
+    throw std::runtime_error("serial_protocol must be legacy19 or seasky_v1");
+  receive_frame_size_ = seasky_ ? 19 : yaml["receive_frame_size"].as<size_t>(19);
+  if (receive_frame_size_ != 18 && receive_frame_size_ != 19)
+    throw std::runtime_error("receive_frame_size must be 18 or 19 for legacy protocol");
+
+  serial_ = std::make_unique<serial::Serial>(
+    port, baudrate, serial::Timeout::simpleTimeout(100));
+  if (!serial_->isOpen()) throw std::runtime_error("Cannot open serial port: " + port);
+  running_ = true;
+  receive_thread_ = std::thread(&CBoard::receive_loop, this);
+
+  std::unique_lock<std::mutex> lock(mutex_);
+  if (!received_.wait_for(lock, timeout_, [this] {
+        return samples_.size() >= 2 || !running_;
+      }) || samples_.size() < 2) {
+    lock.unlock();
+    running_ = false;
+    if (receive_thread_.joinable()) receive_thread_.join();
+    throw std::runtime_error("CBoard IMU startup timeout: check USART wiring and frame format");
+  }
+  tools::logger()->info("[CBoard] USART ready on {}, bullet speed {} m/s", port, bullet_speed);
 }
 
 CBoard::~CBoard()
 {
-    g_running = false;
-    if (g_recv_thread.joinable()) {
-        g_recv_thread.join();
+  running_ = false;
+  received_.notify_all();
+  if (receive_thread_.joinable()) receive_thread_.join();
+  if (serial_ && serial_->isOpen()) serial_->close();
+}
+
+void CBoard::receive_loop()
+{
+  std::vector<uint8_t> buffer;
+  VisionParser parser{};
+  buffer.reserve(2048);
+  try {
+    while (running_) {
+      std::array<uint8_t, 1024> incoming{};
+      const auto count = std::min(serial_->available(), incoming.size());
+      if (count == 0) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        continue;
+      }
+      const auto n = serial_->read(incoming.data(), count);
+      if (seasky_) {
+        std::array<uint8_t, VISION_ATTITUDE_SIZE> frame{};
+        for (size_t j = 0; j < n; ++j) {
+          if (!VisionFeed(&parser, incoming[j], 2, frame.size(), frame.data())) continue;
+          if (frame[6] != 0 || frame[7] != 0) continue;
+          // Convert to the legacy payload layout below, reusing quaternion validation.
+          buffer.push_back(0x55); buffer.push_back(0xAA);
+          buffer.insert(buffer.end(), frame.begin() + 8, frame.begin() + 24);
+          uint8_t checksum = 0;
+          for (size_t k = buffer.size() - 18; k < buffer.size(); ++k) checksum += buffer[k];
+          buffer.push_back(checksum);
+        }
+      } else {
+        buffer.insert(buffer.end(), incoming.begin(), incoming.begin() + n);
+      }
+      const auto timestamp = std::chrono::steady_clock::now();
+
+      size_t i = 0;
+      while (i + receive_frame_size_ <= buffer.size()) {
+        if (buffer[i] != 0x55 || buffer[i + 1] != 0xAA) {
+          ++i;
+          continue;
+        }
+        if (receive_frame_size_ == 19) {
+          uint8_t checksum = 0;
+          for (size_t j = 0; j < 18; ++j) checksum += buffer[i + j];
+          if (checksum != buffer[i + 18]) {
+            ++i;
+            continue;
+          }
+        }
+        std::array<float, 4> xyzw{};
+        std::memcpy(xyzw.data(), buffer.data() + i + 2, 16);
+        Eigen::Quaterniond q(xyzw[3], xyzw[0], xyzw[1], xyzw[2]);
+        const auto norm = q.norm();
+        if (!q.coeffs().allFinite() || norm < 0.8 || norm > 1.2) {
+          ++i;
+          continue;
+        }
+        q.normalize();
+        {
+          std::lock_guard<std::mutex> lock(mutex_);
+          // Several frames in one read share a host timestamp. Keep the latest.
+          if (!samples_.empty() && samples_.back().timestamp == timestamp)
+            samples_.back().q = q;
+          else
+            samples_.push_back({q, timestamp});
+          while (samples_.size() > 5000) samples_.pop_front();
+        }
+        received_.notify_all();
+        i += receive_frame_size_;
+      }
+      buffer.erase(buffer.begin(), buffer.begin() + i);
     }
-    if (g_serial) {
-        if (g_serial->isOpen()) g_serial->close();
-        delete g_serial;
-        g_serial = nullptr;
-    }
+  } catch (const std::exception & e) {
+    tools::logger()->error("[CBoard] USART receive failed: {}", e.what());
+  }
+  running_ = false;
+  received_.notify_all();
 }
 
 Eigen::Quaterniond CBoard::imu_at(std::chrono::steady_clock::time_point timestamp)
 {
-    if (data_behind_.timestamp < timestamp) data_ahead_ = data_behind_;
-
-    while (true) {
-        queue_.pop(data_behind_);
-        if (data_behind_.timestamp > timestamp) break;
-        data_ahead_ = data_behind_;
-    }
-
-    Eigen::Quaterniond q_a = data_ahead_.q.normalized();
-    Eigen::Quaterniond q_b = data_behind_.q.normalized();
-    auto t_a = data_ahead_.timestamp;
-    auto t_b = data_behind_.timestamp;
-    auto t_c = timestamp;
-    std::chrono::duration<double> t_ab = t_b - t_a;
-    std::chrono::duration<double> t_ac = t_c - t_a;
-
-    auto k = t_ac / t_ab;
-    Eigen::Quaterniond q_c = q_a.slerp(k, q_b).normalized();
-
-    return q_c;
+  std::unique_lock<std::mutex> lock(mutex_);
+  if (!received_.wait_for(lock, timeout_, [this, timestamp] {
+        return !running_ || (!samples_.empty() && samples_.back().timestamp >= timestamp);
+      })) {
+    throw std::runtime_error("CBoard IMU timeout");
+  }
+  if (!running_) throw std::runtime_error("CBoard receive thread stopped");
+  if (std::chrono::steady_clock::now() - samples_.back().timestamp > max_imu_age_)
+    throw std::runtime_error("CBoard IMU data is stale");
+  while (samples_.size() > 2 && samples_[1].timestamp <= timestamp)
+    samples_.pop_front();
+  if (timestamp <= samples_.front().timestamp) return samples_.front().q;
+  const auto & a = samples_[0];
+  const auto & b = samples_[1];
+  const auto span = std::chrono::duration<double>(b.timestamp - a.timestamp).count();
+  const auto offset = std::chrono::duration<double>(timestamp - a.timestamp).count();
+  const auto k = std::clamp(offset / span, 0.0, 1.0);
+  return a.q.slerp(k, b.q).normalized();
 }
 
 void CBoard::send(Command command) const
 {
-    if (!g_serial || !g_serial->isOpen()) return;
-    
-    uint8_t data[20];
-    int idx = 0;
-    
-    data[idx++] = 0xAA;
-    data[idx++] = 0x55;
-    data[idx++] = 0x01;
-    
-    *(int16_t*)(data + idx) = (int16_t)(command.control ? 1 : 0);
-    idx += 2;
-    
-    *(int16_t*)(data + idx) = (int16_t)(command.shoot ? 1 : 0);
-    idx += 2;
-    
-    *(float*)(data + idx) = (float)command.yaw;
-    idx += 4;
-    
-    *(float*)(data + idx) = (float)command.pitch;
-    idx += 4;
-    
-    uint8_t checksum = 0;
-    for (int i = 2; i < idx; i++) {
-        checksum += data[i];
-    }
-    data[idx++] = checksum;
-    
+  if (!serial_ || !serial_->isOpen()) return;
+  if (!std::isfinite(command.yaw) || !std::isfinite(command.pitch))
+    command = {false, false, 0, 0};
+  std::array<uint8_t, 16> data{0xAA, 0x55, 0x01};
+  const int16_t control = command.control ? 1 : 0;
+  const int16_t shoot = command.shoot ? 1 : 0;
+  const float yaw = static_cast<float>(command.yaw);
+  const float pitch = static_cast<float>(command.pitch);
+  if (!std::isfinite(yaw) || !std::isfinite(pitch)) {
+    send({false, false, 0, 0});
+    return;
+  }
+  if (seasky_) {
+    std::array<uint8_t, VISION_COMMAND_SIZE> packet{};
+    const float angles[2] = {yaw, pitch};
+    const uint16_t flags = command.control ? (command.shoot ? 3 : 1) : 0;
+    VisionPack(packet.data(), 1, flags, angles, 2);
     try {
-        g_serial->write(data, idx);
+      size_t sent = 0;
+      while (sent < packet.size()) {
+        const auto n = serial_->write(packet.data() + sent, packet.size() - sent);
+        if (!n) throw std::runtime_error("USART write timeout");
+        sent += n;
+      }
     } catch (const std::exception & e) {
-        tools::logger()->warn("Send failed: {}", e.what());
+      tools::logger()->warn("[CBoard] USART send failed: {}", e.what());
     }
+    return;
+  }
+  std::memcpy(data.data() + 3, &control, 2);
+  std::memcpy(data.data() + 5, &shoot, 2);
+  std::memcpy(data.data() + 7, &yaw, 4);
+  std::memcpy(data.data() + 11, &pitch, 4);
+  for (size_t i = 2; i < 15; ++i) data[15] += data[i];
+  try {
+    size_t sent = 0;
+    while (sent < data.size()) {
+      const auto n = serial_->write(data.data() + sent, data.size() - sent);
+      if (n == 0) throw std::runtime_error("USART write timeout (incomplete command)");
+      sent += n;
+    }
+  } catch (const std::exception & e) {
+    tools::logger()->warn("[CBoard] USART send failed: {}", e.what());
+  }
 }
-
-std::string CBoard::read_yaml(const std::string & config_path)
-{
-    return "";
-}
-
 }  // namespace io

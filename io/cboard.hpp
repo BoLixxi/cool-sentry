@@ -2,42 +2,23 @@
 #define IO__CBOARD_HPP
 
 #include <Eigen/Geometry>
+#include <atomic>
 #include <chrono>
-#include <cmath>
-#include <functional>
+#include <condition_variable>
+#include <deque>
+#include <memory>
+#include <mutex>
+#include <serial/serial.h>
 #include <string>
-#include <vector>
+#include <thread>
 
 #include "io/command.hpp"
-#include "io/socketcan.hpp"
-#include "tools/logger.hpp"
-#include "tools/thread_safe_queue.hpp"
 
 namespace io
 {
-enum Mode
-{
-  idle,
-  auto_aim,
-  small_buff,
-  big_buff,
-  outpost
-};
-const std::vector<std::string> MODES = {"idle", "auto_aim", "small_buff", "big_buff", "outpost"};
-
-// 哨兵专有
-enum ShootMode
-{
-  left_shoot,
-  right_shoot,
-  both_shoot
-};
-const std::vector<std::string> SHOOT_MODES = {"left_shoot", "right_shoot", "both_shoot"};
-
 class CBoard
 {
 public:
-  // 将 IMUData 移到 public 区域
   struct IMUData
   {
     Eigen::Quaterniond q;
@@ -45,28 +26,27 @@ public:
   };
 
   double bullet_speed;
-  Mode mode;
-  ShootMode shoot_mode;
-  double ft_angle;  //无人机专有
-
-  CBoard(const std::string & config_path);
-  ~CBoard();  // 添加析构函数
+  explicit CBoard(const std::string & config_path);
+  ~CBoard();
+  CBoard(const CBoard &) = delete;
+  CBoard & operator=(const CBoard &) = delete;
 
   Eigen::Quaterniond imu_at(std::chrono::steady_clock::time_point timestamp);
-  void send(Command command) const;  // 改为非const，因为需要修改串口状态
+  void send(Command command) const;
 
 private:
-  tools::ThreadSafeQueue<IMUData> queue_;
- // SocketCAN* can_;
-  IMUData data_ahead_;
-  IMUData data_behind_;
+  std::unique_ptr<serial::Serial> serial_;
+  std::thread receive_thread_;
+  std::atomic<bool> running_{false};
+  std::mutex mutex_;
+  std::condition_variable received_;
+  std::deque<IMUData> samples_;
+  std::chrono::milliseconds timeout_{1000};
+  std::chrono::milliseconds max_imu_age_{100};
+  bool seasky_ = false;
+  size_t receive_frame_size_ = 19;
 
-  int quaternion_canid_, bullet_speed_canid_, send_canid_;
-
-  //void callback(const can_frame & frame);
-  std::string read_yaml(const std::string & config_path);
+  void receive_loop();
 };
-
 }  // namespace io
-
-#endif  // IO__CBOARD_HPP
+#endif

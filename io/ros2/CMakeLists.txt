@@ -1,0 +1,7 @@
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sp_msgs REQUIRED)
+add_library(nav_ros2 STATIC ros2.cpp publish2nav.cpp subscribe2nav.cpp)
+target_link_libraries(nav_ros2 PUBLIC tools)
+ament_target_dependencies(nav_ros2 rclcpp std_msgs sp_msgs)

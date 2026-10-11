@@ -49,7 +49,7 @@ low_speed_delay_time: 0.0 # s planner use this value
 first_tolerance: 3 # 近距离射击容差，degree
 second_tolerance: 2 # 远距离射击容差，degree
 judge_distance: 2 #距离判断阈值
-auto_fire: true # 是否由自瞄控制射击
+auto_fire: true # 由自瞄控制射击；首次上车前请先确认 command 输出
 
 camera_name: "hikrobot"
 exposure_ms: 10
@@ -72,33 +72,9 @@ R_camera2gimbal: [-0.027182119030230909, -0.12616154330853446, 0.991637230742691
 t_camera2gimbal: [0.13160669975045827, 0.10377721766577375, 0.024908271912914642]
 
 #####-----cboard参数-----#####
-quaternion_canid: 0x100
-bullet_speed_canid: 0x101
-send_canid: 0xff
-can_interface: "/dev/rm_serial"
+serial_port: "/dev/rm_serial"
 baudrate: 115200
-
-#####-----gimbal参数-----#####
-com_port: "/dev/gimbal"
-yaw_kp: 0
-yaw_kd: 0
-pitch_kp: 0
-pitch_kd: 0
-
-#####-----planner-----#####
-fire_thresh: 0.0035
-
-max_yaw_acc: 50
-Q_yaw: [9e6, 0]
-R_yaw: [1]
-
-max_pitch_acc: 100
-Q_pitch: [9e6, 0]
-R_pitch: [1]
-
-#####-----buff_detector参数-----#####
-model: "assets/yolo11_buff_int8.xml"
-
-#####-----buff_aimer参数-----#####
-fire_gap_time: 0.700   # s
-predict_time: 0.120     # s
+bullet_speed: 23.0 # m/s；现有接收帧没有弹速字段，需填实测值
+serial_timeout_ms: 1000
+max_imu_age_ms: 100
+receive_frame_size: 19 # C 板：55 AA + 四元数 + 前 18 字节累加校验

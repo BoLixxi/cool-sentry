@@ -1,6 +1,14 @@
 .vscode/
+!new_framework/.vscode/
+!new_framework/.vscode/**
+__pycache__/
+*.pyc
 .github/
 build/
+build_*/
+build_clean/
+install/
+log/
 Camera/
 logs/
 assets/img_with_q/
