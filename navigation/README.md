@@ -1,6 +1,10 @@
 # 导航 USB + 视觉 USART 双链路验收
 
 Windows 按步骤操作请先看 [WINDOWS_DUAL_LINK_TEST.md](WINDOWS_DUAL_LINK_TEST.md)。
+Windows 调试器观察真实视觉与导航时，按 [真实数据双机验证说明](WINDOWS_REAL_DATA_TEST.md) 操作；单台双系统不能同时运行 Ubuntu 程序和 Windows 调试器。
+实测记录：[Windows 双链路](WINDOWS_DUAL_LINK_RESULTS.md)、[Ubuntu ROS2 与真实视觉并行验收](UBUNTU_DUAL_LINK_RESULTS.md)。
+雷达网络与点云/IMU 接收见 [MID360 实测记录](MID360_UBUNTU_RESULTS.md)；驱动退出修复与局部定位输出见 [Point-LIO 接力记录](POINTLIO_UBUNTU_RESULTS.md)。
+RViz 观察及手持往返实测见 [移动测试记录](POINTLIO_WALK_RESULTS.md)。
 
 本轮继续使用 `new_framework/` 的 basic_framework C 板框架，不换成 StandardRobotpp。
 目标是裸 C 板收发与两个上位机程序并行运行。**不是已完成实车导航、云台闭环或自动射击。**
@@ -204,7 +208,7 @@ USB CDC可继续使用，无需为了这轮集成换USART。实车要做连接�
 - Python协议4项测试通过。
 - ROS2 Humble colcon构建通过；真实ROS2节点+PTY：速度话题→49字节命令、USB反馈→ROS话题、话题断流归零、Ctrl+C退出通过。
 - ARM GCC10.3.1完整固件编译链接通过，使用临时工具链；去掉旧binutils不支持的纯警告链接选项。最终FLASH和RAM占用见构建日志。
-- **尚未烧录此版固件、未实板验证USB+USART同时收发、未连接实车或雷达测试自主导航。**
+- Windows 已烧录并通过实板双链路与一次冷上电测试；Ubuntu 已通过双口复测、ROS2 速度话题及真实蓝色装甲板视觉并行测试，见上方实测记录。尚未连接实车或雷达验证自主导航。
 
 复现基础测试：
 

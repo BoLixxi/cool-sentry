@@ -1,0 +1,72 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 30; 30; 30
+    Fixed Frame: camera_init
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid (1 m)
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 20
+      Reference Frame: <Fixed Frame>
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Registered cloud
+      Enabled: true
+      Topic:
+        Value: /cloud_registered
+        Depth: 5
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+      Color Transformer: AxisColor
+      Position Transformer: XYZ
+      Axis: Z
+      Style: Points
+      Size (Pixels): 2
+      Decay Time: 5
+    - Class: rviz_default_plugins/Path
+      Name: LiDAR trajectory
+      Enabled: true
+      Topic:
+        Value: /path
+        Depth: 10
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+      Color: 255; 220; 0
+      Line Style: Lines
+      Line Width: 0.03
+    - Class: rviz_default_plugins/Odometry
+      Name: Current pose
+      Enabled: true
+      Topic:
+        Value: /aft_mapped_to_init
+        Depth: 10
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+      Keep: 1
+      Shape: Arrow
+      Position Tolerance: 0.01
+      Angle Tolerance: 0.01
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 10
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Pitch: 0.6
+      Yaw: 0.8
+Window Geometry:
+  Width: 1200
+  Height: 850
