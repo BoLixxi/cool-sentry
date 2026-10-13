@@ -3,7 +3,7 @@
 
 #include "main.h"
 #include "tim.h"
-#include <stdint-gcc.h>
+#include <stdint.h>
 #include "bsp_pwm.h"
 #include "bsp_usart.h"
 

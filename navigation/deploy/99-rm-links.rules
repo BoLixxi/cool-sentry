@@ -1,0 +1,5 @@
+# Current new_framework descriptor: VID 0483, PID 00ca (not StandardRobotpp's 5740).
+# With multiple CBoards, add ATTRS{serial}=="<your board serial>" to the USB rule.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="00ca", SYMLINK+="rm_nav", GROUP="dialout", MODE="0660"
+# One CH340 in this robot; with multiple adapters distinguish by serial or physical path.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="rm_serial", GROUP="dialout", MODE="0660"

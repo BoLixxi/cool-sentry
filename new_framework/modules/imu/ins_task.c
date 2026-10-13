@@ -19,6 +19,7 @@
 #include "user_lib.h"
 #include "general_def.h"
 #include "master_process.h"
+#include "navigation.h"
 
 static INS_t INS;
 static IMU_Param_t IMU_Param;
@@ -168,6 +169,7 @@ void INS_Task(void)
         INS.YawTotalAngle = QEKF_INS.YawTotalAngle;
 
         VisionSetQuaternion(INS.q);
+        NavSetImu(INS.q,INS.Gyro);
     }
 
     // temperature control

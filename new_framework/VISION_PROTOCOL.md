@@ -85,3 +85,7 @@ python3 tests/cboard_serial_test.py ./build_clean/cboard_serial_probe
 ```
 
 验收：控制/角度精确解码；乱码、CRC 错误不会刷新有效命令时间；分片和连续帧可恢复；断流 100 ms 后调用 VisionGetCommand 获得无目标、不开火；DMA 发送期间缓冲不被改写。主机测试已通过，但不模拟 HAL IRQ 时序、真实串口干扰和转接器断连。本轮未实现串口物理断连自动重连；发生接收线程错误需要重新启动视觉程序。
+
+## 导航 USB 双链路扩展
+
+当前新增导航 USB CDC，与本视觉 USART 独立。裸板模式默认 `SENTRY_LINK_BENCH_ONLY=1`，不会注册或运行底盘电机。收发协议、快照变量与实板验收步骤见 [navigation/README.md](../navigation/README.md)。

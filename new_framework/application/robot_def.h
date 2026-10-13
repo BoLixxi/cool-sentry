@@ -24,6 +24,9 @@
 // #define VISION_USE_VCP  // 使用虚拟串口发送视觉数据
 #define VISION_USE_UART // 使用 USART1（板上丝印 USART2）发送视觉数据
 
+/* Communication bench firmware: no chassis motor registration or control. */
+#define SENTRY_LINK_BENCH_ONLY 1
+
 /* 机器人重要参数定义,注意根据不同机器人进行修改,浮点数需要以.0或f结尾,无符号以u结尾 */
 // 云台参数
 #define YAW_CHASSIS_ALIGN_ECD 2711  // 云台和底盘对齐指向相同方向时的电机编码器值,若对云台有机械改动需要修改

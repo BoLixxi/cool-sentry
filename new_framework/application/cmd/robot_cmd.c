@@ -5,6 +5,7 @@
 #include "remote_control.h"
 #include "ins_task.h"
 #include "master_process.h"
+#include "navigation.h"
 #include "message_center.h"
 #include "general_def.h"
 #include "dji_motor.h"
@@ -94,6 +95,7 @@ void RobotCMDInit()
     //bmi088_test = BMI088Register(&bmi088_config);
    rc_data = RemoteControlInit(&huart3);   // 修改为对应串口,注意如果是自研板dbus协议串口需选用添加了反相器的那个
     VisionInit(&huart1); // 视觉通信串口
+    NavInit(); // 原生 USB CDC 导航通信
 
     gimbal_cmd_pub = PubRegister("gimbal_cmd", sizeof(Gimbal_Ctrl_Cmd_s));
     gimbal_feed_sub = SubRegister("gimbal_feed", sizeof(Gimbal_Upload_Data_s));
@@ -320,7 +322,12 @@ static void EmergencyHandler()
 /* 机器人核心控制任务,200Hz频率运行(必须高于视觉发送频率) */
 void RobotCMDTask()
 {
-    VisionGetCommand(&vision_snapshot); // 100 ms timeout clears target/fire state
+    uint8_t vision_valid=VisionGetCommand(&vision_snapshot);
+    VisionCommand link_vision={
+        .yaw_rad=vision_snapshot.yaw,.pitch_rad=vision_snapshot.pitch,
+        .control=vision_snapshot.target_state!=NO_TARGET,
+        .shoot=vision_snapshot.fire_mode==AUTO_FIRE};
+    NavTask(vision_valid,&link_vision); // 仅汇集通信快照，不改变电机指令
    // BMI088Acquire(bmi088_test,&bmi088_data) ;
     // 从其他应用获取回传数据
 #ifdef ONE_BOARD

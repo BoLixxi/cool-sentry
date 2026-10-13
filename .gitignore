@@ -20,6 +20,7 @@ records_auto_buff_big/
 records_new/
 imgs/
 MvSdkLog/
+$(ALLUSERSPROFILE)/
 testvideos/
 watchdog.sh
 records_24/

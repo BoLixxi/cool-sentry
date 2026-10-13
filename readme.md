@@ -1,5 +1,7 @@
 # RoboMaster 单相机装甲板自瞄
 
+Ubuntu 接力验证已完成真实姿态接收、海康采集与模型运行，结果和下一步见 [UBUNTU_STEP1_RESULTS.md](UBUNTU_STEP1_RESULTS.md)。本机优先使用完整 `/opt/MVS/lib/64` 海康 SDK，其他安装位置可设置 CMake 参数 `HIKROBOT_SDK_LIB_DIR`。
+
 新电控框架的步骤 1 工作副本位于 `new_framework/`，学习与迁移见 [USART 重写指南](new_framework/VISION_PROTOCOL.md)。对应视觉配置为 `configs/sentry_step1.yaml`，使用 SeaSky 帧、921600 波特率，默认关闭自动开火。下面的旧 USART 协议说明对应 `standard3.yaml` 和旧电控工程。
 
 基于 [同济 SuperPower 开源工程](https://github.com/TongjiSuperPower/sp_vision_25) 整理，面向本队 3V3 / 1V1 使用需求：保留装甲板识别、目标跟踪、弹道预测、射击判断、单海康 USB 相机和 C 板 USART 通信。
@@ -107,3 +109,5 @@ cmake -S . -B build_nav -DBUILD_ROS2_NAV=ON
 验证：当前机器上完整构建通过；虚拟串口验证分片/噪声接收、零四元数拒绝、发送帧字节和校验、姿态超时通过；无窗口离线回放 31 帧运行通过。回放出现过目标发散日志，跟踪参数和精度仍需后续检查。尚未完成海康实拍、实板 USART、导航或实弹验证。
 
 整理前源码与参数备份：`/tmp/sp_vision_before_cleanup_20261010.tar.gz`。移出的文件（含旧运行产物）：`/tmp/sp_vision_removed_20261010/`。这两处位于临时目录，可能被系统清理；Git 中已跟踪内容仍可从历史恢复，用户给出的原 ZIP 保持不变。
+
+导航 USB 与视觉 USART 双链路移植、Windows 裸板验收和小电脑部署见 [navigation/README.md](navigation/README.md)。

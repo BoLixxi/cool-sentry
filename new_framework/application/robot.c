@@ -35,7 +35,7 @@ void RobotInit()
     // ShootInit();
 #endif
 
-#if defined(ONE_BOARD) || defined(CHASSIS_BOARD)
+#if (defined(ONE_BOARD) || defined(CHASSIS_BOARD)) && !SENTRY_LINK_BENCH_ONLY
     ChassisInit();
 #endif
 
@@ -53,7 +53,7 @@ void RobotTask()
     // ShootTask();
 #endif
 
-#if defined(ONE_BOARD) || defined(CHASSIS_BOARD)
+#if (defined(ONE_BOARD) || defined(CHASSIS_BOARD)) && !SENTRY_LINK_BENCH_ONLY
     ChassisTask();
 #endif
 
