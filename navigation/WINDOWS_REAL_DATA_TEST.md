@@ -32,7 +32,7 @@ Windows 电脑：J-Link → 同一块 C 板 SWD，烧录和查看变量
 ```powershell
 git status
 git pull --ff-only origin main
-cd new_framework
+cd ele-con
 mingw32-make -j4
 mingw32-make download_jlink
 ```
@@ -54,10 +54,11 @@ mingw32-make download_jlink
 
 ## Ubuntu 真实视觉先跑
 
-使用已有 Ubuntu 环境，保持镜头前蓝色亮灯装甲板。当前 configs/sentry_step1.yaml 是 enemy_color=blue、auto_fire=false。
+使用已有 Ubuntu 环境，保持镜头前蓝色亮灯装甲板。当前 `auto-aim/configs/sentry_step1.yaml` 是 enemy_color=blue、auto_fire=false。
 
 ```bash
-cd /home/xiaoli/Desktop/sp_vision_25-main
+cd /home/xiaoli/Desktop/cool-sentry
+cd auto-aim
 ./build_clean/standard configs/sentry_step1.yaml
 ```
 
@@ -85,7 +86,7 @@ ros2 topic echo /red_standard_robot1/cmd_vel
 另一个终端启动桥接（把话题替换为实际确认的最终输出）：
 
 ```bash
-cd /home/xiaoli/Desktop/sp_vision_25-main
+cd /home/xiaoli/Desktop/cool-sentry
 source /opt/ros/humble/setup.bash
 source navigation/install/setup.bash
 # 本机临时安装的 pyserial；正常安装 python3-serial 后不需要这一行

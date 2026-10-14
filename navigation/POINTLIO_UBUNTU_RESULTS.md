@@ -31,7 +31,7 @@
 雷达放稳、周围有墙面和物体，初始化期间勿移动。
 
 ```bash
-cd /home/xiaoli/Desktop/sp_vision_25-main
+cd /home/xiaoli/Desktop/cool-sentry
 source navigation/deploy/setup_mid360.bash
 python3 navigation/tests/mid360_stream_check.py
 python3 navigation/tests/pointlio_boardless_check.py

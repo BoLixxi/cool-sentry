@@ -6,7 +6,7 @@ import sys
 import time
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'navigation/ros2/sentry_cboard_bridge'))
-sys.path.insert(0,str(ROOT/'new_framework/host_tests'))
+sys.path.insert(0,str(ROOT/'ele-con/host_tests'))
 from sentry_cboard_bridge.wire import Parser, command
 from windows_serial_probe import AttitudeParser, command as vision_command
 

@@ -1,12 +1,12 @@
 # Windows：烧录并验证导航 USB + 视觉 USART
 
 适用工程：<https://github.com/BoLixxi/cool-sentry>。
-继续使用我们之前的 `new_framework` C 板框架、VSCode、Arm GCC 和 JLink。
+继续使用我们之前的 `ele-con` C 板框架、VSCode、Arm GCC 和 JLink。
 本轮验收目标是 **裸板双路通信与超时保护**，不是让实车运动或射击。
 
 ## 1. 在 Windows 拉取新代码
 
-在 PowerShell 中进入你原来的 **cool-sentry 仓库根目录**，不是 new_framework 子目录：
+在 PowerShell 中进入你原来的 **cool-sentry 仓库根目录**，不是 ele-con 子目录：
 
 ```powershell
 git status
@@ -27,7 +27,7 @@ cd cool-sentry
 
 ```text
 navigation\dual_link_probe.py
-new_framework\modules\navigation\navigation.c
+ele-con\modules\navigation\navigation.c
 navigation\WINDOWS_DUAL_LINK_TEST.md
 ```
 
@@ -47,7 +47,7 @@ py -3 -m pip install pyserial
 若工具找不到，沿用此前 Windows 的工具安装目录并修正 PATH，然后重启 VSCode。
 Python 只用于串口验证，不需要在 Windows 安装 ROS2、海康 SDK 或完整视觉依赖。
 
-确认 `new_framework\application\robot_def.h` 中：
+确认 `ele-con\application\robot_def.h` 中：
 
 ```c
 #define SENTRY_LINK_BENCH_ONLY 1
@@ -59,7 +59,7 @@ Python 只用于串口验证，不需要在 Windows 安装 ROS2、海康 SDK 或
 ## 3. 编译新固件
 
 ```powershell
-cd new_framework
+cd ele-con
 mingw32-make -j4
 ```
 
@@ -72,7 +72,7 @@ build\basic_framework.bin
 ```
 
 只看到旧文件还在不代表编译成功。遇到错误先处理第一条实际错误，不要烧旧固件。
-如果需要排除旧构建缓存，可在确认当前目录为 new_framework 后执行：
+如果需要排除旧构建缓存，可在确认当前目录为 ele-con 后执行：
 
 ```powershell
 mingw32-make clean
@@ -84,7 +84,7 @@ mingw32-make -j4
 |现象|处理|
 |---|---|
 |找不到 arm-none-eabi-gcc|检查原 Windows Arm 工具链的 PATH|
-|找不到 navigation.h / NavInit|确认拉取完整、使用本仓库 new_framework 的 Makefile|
+|找不到 navigation.h / NavInit|确认拉取完整、使用本仓库 ele-con 的 Makefile|
 |找不到 libCMSISDSP.a|检查 Middlewares\ST\ARM\DSP\Lib 文件是否完整|
 |不支持 --no-warn-rwx-segments|用原已验证的新工具链，或只移除这一警告抑制选项|
 
@@ -95,8 +95,8 @@ GitHub 不保存 ELF/HEX 等构建产物，Windows 拉取后重新编译即可�
 沿用此前能正常烧录的 VSCode / Cortex-Debug 或 JFlash 设置：
 
 1. 设备 STM32F407IG，接口 SWD；连接 C 板供电和 JLink。
-2. HEX 选择本次编译的 `new_framework\build\basic_framework.hex`。
-3. 调试符号选择同次构建的 `new_framework\build\basic_framework.elf`。
+2. HEX 选择本次编译的 `ele-con\build\basic_framework.hex`。
+3. 调试符号选择同次构建的 `ele-con\build\basic_framework.elf`。
 4. 下载完成后让 CPU **继续运行**；F5 默认停在 main 时还不会通信。
 5. 确认没有停在 HardFault、Error_Handler 或 BMI088 初始化循环。
 
@@ -113,14 +113,14 @@ GitHub 不保存 ELF/HEX 等构建产物，Windows 拉取后重新编译即可�
 USART 接线：CH340 TX → C板 PB7 RX；CH340 RX → C板 PA9 TX；GND共地。使用3.3V TTL，不接CH340 VCC，C板按此前方式独立供电。
 
 在设备管理器里通过分别拔插原生USB和CH340确定对应COM口。**JLink自身也可能有COM口，不能当作C板导航USB。**
-当前 new_framework 的原生 USB VID:PID 为 **0483:00CA**，不是对方工程的0483:5740。
+当前 ele-con 的原生 USB VID:PID 为 **0483:00CA**，不是对方工程的0483:5740。
 
 关闭其他占用这两个COM口的程序：串口助手、旧probe、其他测试脚本。
 C板 CPU保持运行，不要持续打断点或暂停，否则收发与超时测试会受影响。
 
 ## 6. 一键验证双链路
 
-假设原生USB为COM6，CH340为COM5。在上一步 new_framework 目录中返回仓库根目录：
+假设原生USB为COM6，CH340为COM5。在上一步 ele-con 目录中返回仓库根目录：
 
 ```powershell
 cd ..

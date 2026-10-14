@@ -1,0 +1,46 @@
+cmake_minimum_required(VERSION 3.16)
+project(sp_vision)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+find_package(OpenCV REQUIRED)
+find_package(fmt REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(spdlog REQUIRED)
+find_package(yaml-cpp REQUIRED)
+find_package(nlohmann_json REQUIRED)
+find_package(OpenVINO REQUIRED COMPONENTS Runtime)
+find_package(Threads REQUIRED)
+
+get_filename_component(COOL_SENTRY_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/.." ABSOLUTE)
+include_directories(
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${COOL_SENTRY_ROOT}/interfaces
+  ${OpenCV_INCLUDE_DIRS}
+)
+link_libraries(Eigen3::Eigen)
+add_subdirectory(tools)
+add_subdirectory(io)
+add_subdirectory(tasks/auto_aim)
+
+add_executable(standard src/standard.cpp)
+target_link_libraries(standard auto_aim tools io)
+
+option(BUILD_DEBUG_TOOLS "Build camera, serial, offline and calibration tools" ON)
+if(BUILD_DEBUG_TOOLS)
+  foreach(name capture calibrate_camera calibrate_handeye calibrate_robotworld_handeye split_video)
+    add_executable(${name} calibration/${name}.cpp)
+    target_link_libraries(${name} tools io)
+  endforeach()
+  foreach(name auto_aim_test camera_detect_test camera_test cboard_test detector_video_test)
+    add_executable(${name} tests/${name}.cpp)
+    target_link_libraries(${name} auto_aim tools io)
+  endforeach()
+  add_executable(cboard_serial_probe tests/cboard_serial_probe.cpp)
+  target_link_libraries(cboard_serial_probe io)
+endif()
+

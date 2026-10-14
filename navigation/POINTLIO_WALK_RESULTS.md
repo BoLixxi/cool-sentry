@@ -44,7 +44,7 @@ log 目录不上传 Git；本文件保留关键结果供 GitHub 交接。
 5. 对比估计位移与实测 1 m 距离、起终位置和朝向差。若有异常，保存日志及画面，先排查安装、遮挡、网络和环境几何。
 
 ```bash
-cd /home/xiaoli/Desktop/sp_vision_25-main
+cd /home/xiaoli/Desktop/cool-sentry
 source navigation/deploy/setup_mid360.bash
 # 每轮使用新目录；默认最长 10 分钟，期间不会发送底盘速度
 python3 navigation/tests/pointlio_rviz_session.py \
@@ -54,13 +54,13 @@ python3 navigation/tests/pointlio_rviz_session.py \
 另一个终端查看初始化状态：
 
 ```bash
-cat /home/xiaoli/Desktop/sp_vision_25-main/navigation/log/walk_second/status.json
+cat /home/xiaoli/Desktop/cool-sentry/navigation/log/walk_second/status.json
 ```
 
 返回并静止完成后，在运行脚本的终端按 Ctrl+C，或关闭 RViz，或另一个终端执行：
 
 ```bash
-touch /home/xiaoli/Desktop/sp_vision_25-main/navigation/log/walk_second/finish
+touch /home/xiaoli/Desktop/cool-sentry/navigation/log/walk_second/finish
 ```
 
 脚本会正常停止三组进程并生成 result.json。终端启用软件流控时，Ctrl+S 暂停输出、Ctrl+Q 恢复输出，都不能代替停止进程。

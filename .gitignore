@@ -1,6 +1,6 @@
 .vscode/
-!new_framework/.vscode/
-!new_framework/.vscode/**
+!ele-con/.vscode/
+!ele-con/.vscode/**
 __pycache__/
 *.pyc
 .github/
@@ -9,12 +9,12 @@ build_*/
 build_clean/
 install/
 log/
-!new_framework/bsp/log/
-!new_framework/bsp/log/bsp_log.c
-!new_framework/bsp/log/bsp_log.h
+!ele-con/bsp/log/
+!ele-con/bsp/log/bsp_log.c
+!ele-con/bsp/log/bsp_log.h
 Camera/
 logs/
-assets/img_with_q/
+auto-aim/assets/img_with_q/
 records/
 records_auto_buff_big/
 records_new/

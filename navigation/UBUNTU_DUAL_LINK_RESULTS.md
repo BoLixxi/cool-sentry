@@ -36,7 +36,7 @@
 - CH340：`/dev/rm_serial` → `/dev/ttyUSB0`，921600 8N1。
 - J-Link 是 `/dev/ttyACM1`，不用于导航通信。
 - 海康：MV-CS016-10UC，2bdf:0001。
-- `configs/sentry_step1.yaml` 根据用户实际亮灯装甲板改为 `enemy_color: blue`；保持 `auto_fire: false`。
+- `auto-aim/configs/sentry_step1.yaml` 根据用户实际亮灯装甲板改为 `enemy_color: blue`；保持 `auto_fire: false`。
 - `/dev/rm_nav` 尚未安装规则，本轮使用上述 by-id 路径，无需改写系统配置。
 
 最初红色配置下双路通信有效，但没有跟踪；改为蓝色后出现真实跟踪。
@@ -49,7 +49,7 @@
 更换机器后建议安装 `sudo apt install python3-serial`，再重新构建桥接包。
 
 ```bash
-cd /home/xiaoli/Desktop/sp_vision_25-main
+cd /home/xiaoli/Desktop/cool-sentry
 source /opt/ros/humble/setup.bash
 source navigation/install/setup.bash
 export PYTHONPATH="$PWD/navigation/install/python_deps:$PYTHONPATH"
@@ -63,7 +63,7 @@ python3 navigation/tests/ros_bridge_board_check.py \
 # 加入真实相机视觉；先在镜头前放蓝色亮灯装甲板
 python3 navigation/tests/ros_bridge_board_check.py \
   --usb /dev/serial/by-id/usb-YueLuEmbedded_Vision_Comm_port_306F35813034-if00 \
-  --send-test --vision-config configs/sentry_step1.yaml
+  --send-test --vision-config auto-aim/configs/sentry_step1.yaml
 ```
 
 脚本自动启动和结束程序，使用独立 bench 话题，速度为 (0.2,-0.1,0.3)。
