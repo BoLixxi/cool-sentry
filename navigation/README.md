@@ -6,7 +6,7 @@ Windows 调试器观察真实视觉与导航时，按 [真实数据双机验证�
 雷达网络与点云/IMU 接收见 [MID360 实测记录](MID360_UBUNTU_RESULTS.md)；驱动退出修复与局部定位输出见 [Point-LIO 接力记录](POINTLIO_UBUNTU_RESULTS.md)。
 RViz 观察及手持往返实测见 [移动测试记录](POINTLIO_WALK_RESULTS.md)。
 
-本轮继续使用 `new_framework/` 的 basic_framework C 板框架，不换成 StandardRobotpp。
+本轮继续使用 `ele-con/` 的 basic_framework C 板框架，不换成 StandardRobotpp。
 目标是裸 C 板收发与两个上位机程序并行运行。**不是已完成实车导航、云台闭环或自动射击。**
 
 ## 1. 接线和分工
@@ -82,15 +82,15 @@ USB掉线后每秒重试；重连后必须收到新的 cmd_vel，避免重放旧
 
 ## 4. 先在 Windows 烧录并检查
 
-继续使用 `new_framework/WINDOWS_STEP1_TEST.md` 的 GCC + JLink 流程。VSCode终端：
+继续使用 `ele-con/WINDOWS_STEP1_TEST.md` 的 GCC + JLink 流程。VSCode终端：
 
 ```powershell
-cd <你的工程路径>\new_framework
+cd <你的工程路径>\ele-con
 mingw32-make -j4
 ```
 
-新 ELF/HEX 在 `new_framework/build/`，调试器和烧录器都选本次构建产物，不能用旧缓存。
-本次 Linux 已构建的固件在 `new_framework/build_navigation/basic_framework.hex`，匹配 ELF 在同目录；这个目录被gitignore忽略，GitHub拉取后应重新构建。
+新 ELF/HEX 在 `ele-con/build/`，调试器和烧录器都选本次构建产物，不能用旧缓存。
+本次 Linux 已构建的固件在 `ele-con/build_navigation/basic_framework.hex`，匹配 ELF 在同目录；这个目录被gitignore忽略，GitHub拉取后应重新构建。
 用较旧 binutils 时 `--no-warn-rwx-segments` 可能不支持；可删除这一纯警告选项或升级工具链。
 **不要烧另一个压缩包的完整工程。测试时电机/发射机构断开，先确认 SENTRY_LINK_BENCH_ONLY=1。**
 
@@ -116,7 +116,7 @@ COM6/COM5只是示例。USB口通过拔插C板原生USB识别，CH340口通过�
 ```bash
 sudo apt install python3-serial
 mkdir -p ~/sentry_nav_ws/src
-ln -s /home/xiaoli/Desktop/sp_vision_25-main/navigation/ros2/sentry_cboard_bridge ~/sentry_nav_ws/src/sentry_cboard_bridge
+ln -s /home/xiaoli/Desktop/cool-sentry/navigation/ros2/sentry_cboard_bridge ~/sentry_nav_ws/src/sentry_cboard_bridge
 source /opt/ros/humble/setup.bash
 cd ~/sentry_nav_ws
 colcon build --symlink-install --packages-select sentry_cboard_bridge
@@ -129,7 +129,7 @@ source install/setup.bash
 因此不能仅看 `/dev/ttyACM0` 就认定是C板！先确认 `lsusb` 和拔插变化。
 
 ```bash
-sudo cp /home/xiaoli/Desktop/sp_vision_25-main/navigation/deploy/99-rm-links.rules /etc/udev/rules.d/99-rm-links.rules
+sudo cp /home/xiaoli/Desktop/cool-sentry/navigation/deploy/99-rm-links.rules /etc/udev/rules.d/99-rm-links.rules
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ls -l /dev/rm_nav /dev/rm_serial
@@ -141,7 +141,7 @@ ls -l /dev/rm_nav /dev/rm_serial
 先关闭所有串口程序，验收裸板：
 
 ```bash
-cd /home/xiaoli/Desktop/sp_vision_25-main
+cd /home/xiaoli/Desktop/cool-sentry
 python3 navigation/dual_link_probe.py --usb /dev/rm_nav --vision /dev/rm_serial --seconds 6 --send-test
 ```
 
@@ -171,12 +171,12 @@ ros2 topic echo /serial/link_snapshot
 再启视觉（配置保持 auto_fire=false）：
 
 ```bash
-cd /home/xiaoli/Desktop/sp_vision_25-main
+cd /home/xiaoli/Desktop/cool-sentry/auto-aim
 ./build_clean/standard configs/sentry_step1.yaml
 ```
 
 这个`standard`才有C板视觉收发；`camera_detect_test`只做图像识别，不发送视觉控制。
-若要窗口测试，可用本项目已有的视觉调试参数，先执行 `./build_clean/standard --help` 查看。
+若要窗口测试，可在 `auto-aim/` 目录执行 `./build_clean/standard --help` 查看视觉调试参数。
 
 最后在导航工作区运行原实机导航 launch：
 
@@ -214,7 +214,7 @@ USB CDC可继续使用，无需为了这轮集成换USART。实车要做连接�
 
 ```bash
 python3 -m unittest discover -s navigation/tests -v
-cc -std=c11 -Wall -Wextra -Werror -Inew_framework/host_tests/stubs -Inew_framework/modules/master_machine new_framework/host_tests/navigation_module_test.c -lm -o /tmp/nav_module_test
+cc -std=c11 -Wall -Wextra -Werror -Iinterfaces -Iele-con/host_tests/stubs -Iele-con/modules/master_machine ele-con/host_tests/navigation_module_test.c -lm -o /tmp/nav_module_test
 /tmp/nav_module_test
 ```
 

@@ -8,7 +8,7 @@
 
 ## 环境及端口
 
-- 工程：D:\autoshot_rm\cool-sentry\new_framework。
+- 工程：D:\autoshot_rm\cool-sentry\ele-con。
 - 裸板模式：SENTRY_LINK_BENCH_ONLY=1，底盘控制未启用，云台/发射任务未启用。
 - 原生导航 USB：COM8，VID:PID=0483:00CA。
 - 视觉 CH340：COM7，VID:PID=1A86:7523，921600、8N1。

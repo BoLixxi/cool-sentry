@@ -33,7 +33,7 @@
 更换机器后须重新克隆源码并构建，不能复用本机生成的 install。
 
 ```bash
-cd /home/xiaoli/Desktop/sp_vision_25-main
+cd /home/xiaoli/Desktop/cool-sentry
 source /opt/ros/humble/setup.bash
 source navigation/build_mid360/install/setup.bash
 export ROS_LOG_DIR=/tmp/sentry-mid360-ros-logs
@@ -62,4 +62,4 @@ ping -c 3 192.168.1.3
 当前没有实车，不能验证轮速里程计、定位闭环和底盘运动。实机导航的最终速度话题须核对，EW- 记录提到 /red_standard_robot1/cmd_vel，不能默认就是 /cmd_vel。
 新 sentry_cboard_bridge 负责唯一的 C 板 USB 通信，旧 standard_robot_pp_ros2 串口节点应关闭。
 
-终端顶部曾显示 ~/Desktop/sp_vision_25-main/install/setup.bash 不存在，是 ~/.bashrc 里的旧 source 路径；正确桥接路径为 navigation/install/setup.bash。此次未修改用户的 ~/.bashrc。
+终端顶部曾显示旧仓库目录下的 `install/setup.bash` 不存在，是 `~/.bashrc` 里的旧 source 路径；正确桥接路径为 `navigation/install/setup.bash`。此次未修改用户的 `~/.bashrc`。

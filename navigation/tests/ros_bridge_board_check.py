@@ -19,11 +19,12 @@ import yaml
 def main():
     cli = argparse.ArgumentParser(description=__doc__)
     cli.add_argument('--usb', required=True)
-    cli.add_argument('--vision-config', help='Also launch build_clean/standard with auto_fire=false')
+    cli.add_argument('--vision-config', help='Also launch auto-aim/build_clean/standard with auto_fire=false')
     cli.add_argument('--send-test', action='store_true', required=True,
                      help='Confirm bare-board bench mode / disconnected motors')
     args = cli.parse_args()
     root = pathlib.Path(__file__).resolve().parents[2]
+    auto_aim_dir = root / 'auto-aim'
     config = None
     if args.vision_config:
         config = pathlib.Path(args.vision_config).resolve()
@@ -41,8 +42,8 @@ def main():
     vision = None
     try:
         if config:
-            vision = subprocess.Popen([str(root / 'build_clean/standard'), str(config)],
-                                      cwd=root, start_new_session=True)
+            vision = subprocess.Popen([str(auto_aim_dir / 'build_clean/standard'), str(config)],
+                                      cwd=auto_aim_dir, start_new_session=True)
         proc = subprocess.Popen([
             'ros2', 'run', 'sentry_cboard_bridge', 'bridge', '--ros-args',
             '-r', '__ns:=' + namespace, '-p', 'device:=' + args.usb,
