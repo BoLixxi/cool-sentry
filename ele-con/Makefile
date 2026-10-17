@@ -300,7 +300,7 @@ LIBS = -lc -lm -lnosys  \
 -l:libCMSISDSP.a
 LIBDIR =  \
 -LMiddlewares/ST/ARM/DSP/Lib
-LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections -flto -Wl,--no-warn-rwx-segments -Wl,--print-memory-usage
+LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections -flto -Wl,--print-memory-usage
 
 # default action: build all
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
@@ -340,7 +340,7 @@ $(BUILD_DIR):
 # clean up
 #######################################
 clean:
-	rd $(BUILD_DIR) /s/q
+	rm -rf -- $(BUILD_DIR)
 
 
 #######################################
@@ -354,7 +354,17 @@ clean:
 #######################################
 download_dap:
 	openocd -f openocd_dap.cfg -c init -c halt -c "flash write_image erase $(BUILD_DIR)/$(TARGET).bin 0x08000000" -c reset -c shutdown
-download_jlink:
-	"D:/ozone+jlink/JLink_V938/JFlash.exe" -openprj"stm32.jflash" -open"build/basic_framework.hex",0x08000000 -auto -startapp -exit
+download_jlink_openocd:  # linux
+	openocd -f openocd_jlink.cfg \
+		-c init \
+		-c halt \
+		-c "flash write_image erase $(BUILD_DIR)/$(TARGET).bin 0x08000000" \
+		-c reset \
+		-c shutdown
+download_jlink:  # windows
+	"$(JFLASH)" \
+	-openprj"$(JFLASH_PROJECT)" \
+	-open"$(CURDIR)/$(BUILD_DIR)/$(TARGET).hex",0x08000000 \
+	-auto -startapp -exit
 
 # *** EOF ***
